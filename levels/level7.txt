@@ -1,0 +1,189 @@
+dirt 0 760
+dirt 40 760
+dirt 80 760
+dirt 120 760
+dirt 160 760
+dirt 200 760
+dirt 240 760
+dirt 280 760
+dirt 320 760
+dirt 360 760
+dirt 400 760
+dirt 440 760
+dirt 480 760
+dirt 520 760
+dirt 560 760
+dirt 600 760
+dirt 640 760
+dirt 680 760
+dirt 720 760
+dirt 760 760
+dirt 800 760
+dirt 960 760
+dirt 0 0
+dirt 0 160
+dirt 0 200
+dirt 0 240
+dirt 0 280
+dirt 0 320
+dirt 0 360
+dirt 0 400
+dirt 0 440
+dirt 0 480
+dirt 0 520
+dirt 0 560
+dirt 0 600
+dirt 0 640
+dirt 0 680
+dirt 0 720
+dirt 0 760
+dirt 0 0
+dirt 40 0
+dirt 80 0
+dirt 120 0
+dirt 160 0
+dirt 200 0
+dirt 240 0
+dirt 280 0
+dirt 320 0
+dirt 360 0
+dirt 400 0
+dirt 440 0
+dirt 480 0
+dirt 520 0
+dirt 560 0
+dirt 600 0
+dirt 640 0
+dirt 680 0
+dirt 720 0
+dirt 760 0
+dirt 800 0
+dirt 840 0
+dirt 880 0
+dirt 920 0
+dirt 960 0
+dirt 960 720
+dirt 960 680
+dirt 960 640
+dirt 960 600
+dirt 960 560
+dirt 960 520
+dirt 960 480
+dirt 960 440
+dirt 960 400
+dirt 960 360
+dirt 960 320
+dirt 960 280
+dirt 960 280
+dirt 960 240
+dirt 960 200
+dirt 960 160
+dirt 960 120
+dirt 960 80
+dirt 960 40
+dirt 840 760  
+dirt 880 760  
+dirt 920 760  
+dirt 0 120  
+board 920 160  without 0
+board 880 160  without 0
+board 800 160  without 0
+board 760 200  
+board 720 200  
+board 680 200  
+board 640 200  
+board 600 200  
+board 560 200  
+board 840 160  without 0
+board 520 200  
+board 480 200  
+board 440 200  
+board 400 200  
+spike 360 200  
+spike 320 200  
+board 0 80  without 0
+board 0 40  without 0
+board 920 360  
+board 880 360  
+spike 280 200  
+spike 240 200  
+spike 200 200  
+dirt 160 640  
+dirt 200 640  
+board 240 520  
+board 280 520  
+board 360 400  without 0
+board 400 440  without 0
+board 440 320  without 0
+board 480 360  without 0
+stone_wall 520 320  
+spike 240 360  
+spike 200 400  
+spike 160 440  
+spike 120 480  
+spike 280 320  
+spike 320 280  
+Homa 120 40  
+stone_wall 560 320  
+stone_wall 600 320  
+board 560 560  
+board 520 560  
+board 400 400  without 0
+board 440 360  without 0
+board 680 560  
+board 720 560  
+board 760 560  
+board 840 400  
+board 800 440  
+board 800 240  
+squirrel 840 80 go 300 0
+bush 800 120  
+board 280 160  without 1
+board 240 160  without 1
+board 200 160  without 1
+board 160 160  without 1
+board 40 120  without 1
+board 80 200  without 1
+board 200 120  without 0
+board 200 80  without 0
+board 200 40  without 0
+board 200 160  without 0
+board 200 200  without 0
+board 200 240  without 0
+board 240 120  
+board 240 160  
+board 600 40  
+board 600 80  
+board 360 200  without 0
+board 400 440  without 1
+board 400 400  without 1
+board 40 520  without 1
+board 80 520  without 1
+board 120 520  without 1
+board 160 520  without 1
+board 200 520  without 1
+board 360 440  without 1
+dirt 520 480  
+dirt 520 400  
+board 840 240  sleep 1
+board 920 240  sleep 1
+board 880 240  sleep 1
+cook 40 80  
+cook 40 80  
+cook 40 40  
+cook 40 80  
+cook 40 80  
+cook 40 80  
+cook 40 80  
+cook 40 80  
+cook 40 80  
+cook 40 80  
+cook 40 80  
+cook 40 80  
+cook 40 40  
+cook 40 40  
+cook 40 40  
+cook 40 40  
+cook 40 40  
+cook 40 40  
+cook 40 40  

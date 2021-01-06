@@ -1,0 +1,183 @@
+dirt 0 760
+dirt 40 760
+dirt 80 760
+dirt 120 760
+dirt 160 760
+dirt 200 760
+dirt 240 760
+dirt 280 760
+dirt 320 760
+dirt 360 760
+dirt 400 760
+dirt 440 760
+dirt 480 760
+dirt 520 760
+dirt 560 760
+dirt 600 760
+dirt 640 760
+dirt 680 760
+dirt 720 760
+dirt 760 760
+dirt 800 760
+dirt 840 760
+dirt 880 760
+dirt 920 760
+dirt 960 760
+dirt 0 0
+dirt 0 160
+dirt 0 200
+dirt 0 240
+dirt 0 280
+dirt 0 320
+dirt 0 360
+dirt 0 400
+dirt 0 440
+dirt 0 480
+dirt 0 520
+dirt 0 560
+dirt 0 600
+dirt 0 640
+dirt 0 680
+dirt 0 720
+dirt 0 760
+dirt 0 0
+dirt 40 0
+dirt 80 0
+dirt 120 0
+dirt 160 0
+dirt 200 0
+dirt 240 0
+dirt 280 0
+dirt 320 0
+dirt 360 0
+dirt 400 0
+dirt 440 0
+dirt 480 0
+dirt 520 0
+dirt 560 0
+dirt 600 0
+dirt 640 0
+dirt 680 0
+dirt 720 0
+dirt 760 0
+dirt 800 0
+dirt 840 0
+dirt 880 0
+dirt 920 0
+dirt 960 0
+dirt 960 720
+dirt 960 680
+dirt 960 640
+dirt 960 600
+dirt 960 560
+dirt 960 520
+dirt 960 480
+dirt 960 440
+dirt 960 400
+dirt 960 360
+dirt 960 320
+dirt 960 280
+dirt 960 280
+dirt 960 240
+dirt 960 200
+dirt 960 160
+dirt 960 120
+dirt 960 80
+dirt 960 40
+dirt 40 280  
+dirt 80 280  
+dirt 120 280  
+dirt 160 280  
+dirt 160 240  
+dirt 160 200  
+dirt 160 160  
+spike 40 240  
+spike 80 240  
+spike 120 240  
+board 40 160  without 1
+board 120 160  without 1
+board 40 160  without 1
+board 40 600  without 1
+board 80 600  without 1
+board 160 600  without 1
+board 320 160  without 1
+esh 600 560  
+board 120 600  without 1
+board 120 600  without 1
+board 280 640  without 1
+board 320 640  without 1
+esh 440 640  
+board 80 160  without 1
+dirt 40 480  
+dirt 160 440  
+dirt 320 440  
+dirt 480 600  
+dirt 640 600  sleep 1
+dirt 760 600  sleep 0
+dirt 880 600  
+dirt 920 600  
+dirt 920 480  
+dirt 920 360  
+dirt 760 360  
+dirt 600 360  
+dirt 480 320  
+dirt 360 200  sleep 1
+dirt 200 280  
+cook 0 120  
+cook 40 120  
+cook 80 120  
+cook 120 120  
+cook 160 120  
+cook 0 80  
+cook 40 80  
+cook 80 80  
+cook 120 80  
+cook 160 80  
+cook 640 560  
+cook 760 560  
+cook 920 320  
+cook 920 240  
+cook 920 280  
+cook 920 200  
+cook 880 320  
+cook 880 280  
+cook 40 560  
+cook 40 520  
+cook 40 440  
+cook 160 400  
+cook 280 600  
+cook 320 400  
+cook 480 560  
+cook 640 560  
+cook 880 560  
+cook 920 440  
+cook 760 320  
+cook 600 320  
+cook 480 280  
+cook 360 160  
+cook 200 240  
+cook 200 200  
+cook 200 160  
+cook 200 120  
+cook 200 80  
+cook 320 120  
+cook 320 80  
+cook 280 80  
+cook 240 80  
+cook 280 120  
+cook 240 160  
+cook 240 120  
+cook 240 200  
+board 240 440  without 1
+dirt 760 240  
+board 640 360  without 1
+board 800 480  without 1
+cook 760 200  
+cook 760 160  
+cook 760 120  
+cook 760 80  
+cook 800 160  
+cook 720 160  
+cook 720 120  
+cook 800 120  
+squirrel 120 560  

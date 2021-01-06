@@ -1,0 +1,206 @@
+dirt 0 760
+dirt 40 760
+dirt 80 760
+dirt 120 760
+dirt 160 760
+dirt 200 760
+dirt 240 760
+dirt 280 760
+dirt 320 760
+dirt 360 760
+dirt 400 760
+dirt 440 760
+dirt 480 760
+dirt 520 760
+dirt 560 760
+dirt 600 760
+dirt 640 760
+dirt 680 760
+dirt 720 760
+dirt 760 760
+dirt 800 760
+dirt 960 760
+dirt 0 0
+dirt 0 160
+dirt 0 200
+dirt 0 240
+dirt 0 280
+dirt 0 320
+dirt 0 360
+dirt 0 400
+dirt 0 440
+dirt 0 480
+dirt 0 520
+dirt 0 560
+dirt 0 600
+dirt 0 640
+dirt 0 680
+dirt 0 720
+dirt 0 760
+dirt 0 0
+dirt 40 0
+dirt 80 0
+dirt 120 0
+dirt 160 0
+dirt 200 0
+dirt 240 0
+dirt 280 0
+dirt 320 0
+dirt 360 0
+dirt 400 0
+dirt 440 0
+dirt 480 0
+dirt 520 0
+dirt 560 0
+dirt 600 0
+dirt 640 0
+dirt 680 0
+dirt 720 0
+dirt 760 0
+dirt 800 0
+dirt 840 0
+dirt 880 0
+dirt 920 0
+dirt 960 0
+dirt 960 720
+dirt 960 680
+dirt 960 640
+dirt 960 600
+dirt 960 560
+dirt 960 520
+dirt 960 480
+dirt 960 440
+dirt 960 400
+dirt 960 360
+dirt 960 320
+dirt 960 280
+dirt 960 280
+dirt 960 240
+dirt 960 200
+dirt 960 160
+dirt 960 120
+dirt 960 80
+dirt 960 40
+dirt 0 120  
+dirt 0 80  
+dirt 0 40  
+gold 840 720  without 0
+gold 880 720  without 0
+gold 920 720  without 0
+Homa 920 640  
+dirt 920 560  
+dirt 800 600  
+dirt 800 440  
+dirt 760 440  
+dirt 720 440  
+dirt 680 440  
+dirt 640 440  
+dirt 600 440   
+dirt 480 440  
+dirt 440 440  
+dirt 400 440  
+dirt 360 440  
+dirt 320 440  
+dirt 280 440  
+dirt 240 440  
+dirt 200 440  
+dirt 160 440  
+dirt 120 440  
+dirt 80 440  
+dirt 40 440  
+dirt 760 400  
+spike 720 400  
+spike 680 400  
+spike 640 400  
+spike 600 400  
+spike 560 400   
+spike 440 400  
+spike 400 400  
+spike 360 400  
+spike 320 400  
+spike 280 400  
+dirt 920 320  
+dirt 800 200  
+dirt 680 240  sleep 1
+dirt 520 240  
+dirt 560 240  
+dirt 480 240  dekor
+dirt 440 240  dekor
+dirt 400 240  
+dirt 280 160  
+dirt 120 160  
+dirt 160 160  
+spike 200 200  
+spike 240 200  
+dirt 280 200  
+dirt 280 240  
+dirt 240 240  
+dirt 200 240  
+dirt 160 200  
+dirt 160 240  
+spike 40 320  
+esh 160 360  
+spike 480 400  
+spike 520 400  
+board 520 440  dekor
+board 560 440  dekor
+esh 80 680  
+esh 320 600  
+esh 520 600  
+esh 240 560  
+squirrel 120 520  
+squirrel 520 520  
+bush 200 720  
+bush 480 720  
+bush 240 400  
+stone_wall 760 480  without 0
+stone_wall 760 640  without 0
+stone_wall 760 720  without 0
+stone_wall 720 680  without 0
+stone_wall 720 600  without 0
+stone_wall 760 560  without 0
+stone_wall 720 520  without 0
+stone_wall 680 480  without 0
+stone_wall 680 560  without 0
+stone_wall 680 640  without 0
+stone_wall 680 720  without 0
+cook 40 600  
+cook 80 600  
+cook 40 560  
+cook 80 560  
+cook 120 600  
+cook 120 560  
+cook 160 600  
+cook 160 560  
+cook 200 560  
+cook 200 600  
+cook 240 560  
+cook 240 600  
+cook 280 560  
+cook 280 600  
+cook 680 520  
+cook 680 520  
+cook 720 480  
+cook 720 480  
+cook 760 520  
+cook 760 520  
+cook 720 560  
+cook 680 600  
+cook 680 600  
+cook 720 640  
+cook 720 640  
+cook 760 600  
+cook 760 680  
+cook 760 680  
+cook 760 680  
+cook 720 720  
+cook 680 680  
+cook 560 200  
+cook 560 200  
+cook 520 200  
+cook 520 200  
+cook 520 200  
+cook 480 200  
+cook 440 200  
+cook 400 200  
+cook 400 200  

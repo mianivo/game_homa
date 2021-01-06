@@ -1,0 +1,168 @@
+Homa 840 680
+stone_wall 0 760 without 0
+stone_wall 40 760 without 0
+stone_wall 80 760 without 0
+stone_wall 120 760 without 0
+stone_wall 160 760 without 0
+stone_wall 200 760 without 0
+stone_wall 240 760 without 0
+stone_wall 280 760 without 0
+stone_wall 320 760 without 0
+stone_wall 360 760 without 0
+stone_wall 400 760 without 0
+stone_wall 440 760 without 0
+stone_wall 480 760 without 0
+stone_wall 520 760 without 0
+stone_wall 560 760 without 0
+stone_wall 600 760 without 0
+stone_wall 640 760 without 0
+stone_wall 680 760 without 0
+stone_wall 720 760 without 0
+stone_wall 760 760 without 0
+stone_wall 800 760 without 0
+stone_wall 840 760 without 0
+stone_wall 880 760 without 0
+stone_wall 920 760 without 0
+stone_wall 960 760 without 0
+stone_wall 0 0 without 0
+stone_wall 0 160 without 0
+stone_wall 0 200 without 0
+stone_wall 0 240 without 0
+stone_wall 0 280 without 0
+stone_wall 0 320 without 0
+stone_wall 0 360 without 0
+stone_wall 0 400 without 0
+stone_wall 0 440 without 0
+stone_wall 0 480 without 0
+stone_wall 0 520 without 0
+stone_wall 0 560 without 0
+stone_wall 0 600 without 0
+stone_wall 0 640 without 0
+stone_wall 0 680 without 0
+stone_wall 0 720 without 0
+stone_wall 0 760 without 0
+stone_wall 0 0 without 0
+stone_wall 40 0 without 0
+stone_wall 80 0 without 0
+stone_wall 120 0 without 0
+stone_wall 160 0 without 0
+stone_wall 200 0 without 0
+stone_wall 240 0 without 0
+stone_wall 280 0 without 0
+stone_wall 320 0 without 0
+stone_wall 360 0 without 0
+stone_wall 400 0 without 0
+stone_wall 440 0 without 0
+stone_wall 480 0 without 0
+stone_wall 520 0 without 0
+stone_wall 560 0 without 0
+stone_wall 600 0 without 0
+stone_wall 640 0 without 0
+stone_wall 680 0 without 0
+stone_wall 720 0 without 0
+stone_wall 760 0 without 0
+stone_wall 800 0 without 0
+stone_wall 840 0 without 0
+stone_wall 880 0 without 0
+stone_wall 920 0 without 0
+stone_wall 960 0 without 0
+stone_wall 960 720 without 0
+stone_wall 960 680 without 0
+stone_wall 960 640 without 0
+stone_wall 960 600 without 0
+stone_wall 960 560 without 0
+stone_wall 960 520 without 0
+stone_wall 960 480 without 0
+stone_wall 960 440 without 0
+stone_wall 960 400 without 0
+stone_wall 960 360 without 0
+stone_wall 960 320 without 0
+stone_wall 960 280 without 0
+stone_wall 960 280 without 0
+stone_wall 960 240 without 0
+stone_wall 960 200 without 0
+stone_wall 960 160 without 0
+stone_wall 960 120 without 0
+stone_wall 960 80 without 0
+stone_wall 960 40 without 0
+stone_wall 0 120 without 0
+stone_wall 0 80 without 0
+stone_wall 0 40 without 0
+stone_wall 920 640 without 0
+stone_wall 920 520 without 0
+stone_wall 920 400 without 0
+stone_wall 920 280 without 0
+stone_wall 920 160 without 0
+stone_wall 640 600
+stone_wall 520 600
+stone_wall 520 480
+stone_wall 520 480
+stone_wall 520 360
+stone_wall 360 360 sleep 0
+stone_wall 200 360 sleep 1
+esh 120 520
+esh 680 680
+esh 240 600
+esh 160 520
+stone_wall 40 160
+stone_wall 80 160
+stone_wall 120 160
+stone_wall 160 160
+stone_wall 200 160
+squirrel 80 80
+stone_wall 240 160
+stone_wall 280 160
+bush 280 120
+stone_wall 40 600
+stone_wall 80 600
+stone_wall 120 600
+stone_wall 120 600
+stone_wall 160 600
+stone_wall 200 600
+stone_wall 240 600
+esh 80 560
+stone_wall 40 320
+stone_wall 80 320
+stone_wall 120 320
+stone_wall 160 320
+esh 80 240
+stone_wall 320 360 sleep 1
+esh 360 680
+stone_wall 520 680
+stone_wall 240 720
+stone_wall 240 680 dekor
+stone_wall 240 640 dekor
+mega_cook 40 640
+cook 40 680
+cook 40 720
+cook 80 640
+cook 80 680
+mega_cook 80 720
+cook 120 640
+cook 120 680
+cook 120 720
+cook 160 640
+mega_cook 160 680
+cook 160 720
+cook 200 640
+mega_cook 200 680
+cook 200 720
+stone_wall 200 640 dekor
+stone_wall 200 680 dekor
+stone_wall 200 680 dekor
+stone_wall 200 720 dekor
+stone_wall 160 640 dekor
+stone_wall 160 680 dekor
+stone_wall 160 720 dekor
+stone_wall 120 720 dekor
+stone_wall 120 680 dekor
+stone_wall 120 640 dekor
+stone_wall 80 640 dekor
+stone_wall 80 680 dekor
+stone_wall 80 720 dekor
+stone_wall 40 640 dekor
+stone_wall 40 680 dekor
+stone_wall 40 720 dekor
+stone_wall 920 720 dekor
+stone_wall 920 680 dekor
+esh 440 560

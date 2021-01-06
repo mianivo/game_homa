@@ -1,0 +1,87 @@
+Homa 500 -100
+final_boss_wall 280 760  
+final_boss_wall 320 760  
+final_boss_wall 360 760  
+final_boss_wall 400 760  
+final_boss_wall 440 760  
+final_boss_wall 480 760  
+final_boss_wall 520 760  
+final_boss_wall 560 760  
+final_boss_wall 600 760  
+final_boss_wall 640 760  
+final_boss_wall 680 760  
+final_boss_wall 720 760  
+final_boss_wall 760 760  
+final_boss_wall 800 760  
+final_boss_wall 840 760  
+final_boss_wall 880 760  
+final_boss_wall 920 760  
+final_boss_wall 960 760  
+final_boss_wall 960 720  
+final_boss_wall 960 680  
+final_boss_wall 960 640  
+final_boss_wall 960 600  
+final_boss_wall 960 560  
+final_boss_wall 960 520  
+final_boss_wall 960 480  
+final_boss_wall 960 400  
+final_boss_wall 960 360  
+final_boss_wall 960 440  
+final_boss_wall 960 320  
+final_boss_wall 960 280  
+final_boss_wall 960 240  
+final_boss_wall 960 200  
+final_boss_wall 240 760  
+final_boss_wall 160 760  
+final_boss_wall 200 760  
+final_boss_wall 120 760  
+final_boss_wall 80 760  
+final_boss_wall 0 760  
+final_boss_wall 40 760  
+final_boss_wall 0 720  
+final_boss_wall 0 680  
+final_boss_wall 0 640  
+final_boss_wall 0 600  
+final_boss_wall 0 560  
+final_boss_wall 0 520  
+final_boss_wall 0 480  
+final_boss_wall 0 440  
+final_boss_wall 0 400  
+final_boss_wall 0 360  
+final_boss_wall 0 320  
+final_boss_wall 0 280  
+final_boss_wall 0 240  
+final_boss_wall 0 200  
+final_boss_wall 0 160  
+final_boss_wall 920 280  without 1
+final_boss_wall 920 240  without 1
+final_boss_wall 920 200  without 1
+final_boss_wall 680 280  without 1
+final_boss_wall 560 280  without 1
+final_boss_wall 440 280  without 1
+final_boss_wall 320 280  without 1
+final_boss_wall 200 280  without 1
+final_boss_wall 80 240  without 1
+squirrel 80 160  
+squirrel 880 200  
+esh 160 80  
+esh 440 80  
+esh 720 40  
+final_boss_wall 960 160  
+final_boss_wall 960 120  
+final_boss_wall 960 80  
+final_boss_wall 960 40  
+final_boss_wall 0 40  
+final_boss_wall 0 0  
+final_boss_wall 40 720  
+final_boss_wall 40 680  
+final_boss_wall 920 720  
+final_boss_wall 920 680  
+final_boss_wall 160 600  
+final_boss_wall 240 480  
+final_boss_wall 360 480  
+final_boss_wall 480 480  
+final_boss_wall 600 480  
+final_boss_wall 720 480  
+final_boss_wall 840 560  
+final_boss_wall 800 360  without 1

@@ -1,0 +1,151 @@
+dirt 0 0
+dirt 960 760  
+Homa 960 680  
+dirt 920 760  
+dirt 880 760  
+dirt 840 760  
+dirt 800 760  
+dirt 960 200  
+dirt 920 160  
+dirt 920 120  
+dirt 880 80  
+dirt 880 40  
+dirt 840 0  
+bush 960 160  
+bush 920 80  
+bush 880 0  
+dirt 760 760  
+dirt 720 760  
+dirt 680 760  
+dirt 640 760  
+dirt 600 760  
+dirt 560 760  
+dirt 520 760  
+dirt 480 760  
+dirt 440 760  
+dirt 400 760  
+dirt 360 760  
+dirt 320 760  
+dirt 280 760  
+dirt 240 760  
+dirt 200 760  
+dirt 160 760  
+dirt 120 760  
+dirt 80 760  
+dirt 40 760  
+dirt 0 760  
+dirt 40 0  
+dirt 80 0  
+dirt 120 720  
+dirt 120 680  
+dirt 120 640  
+dirt 120 600  
+dirt 120 560  
+dirt 120 520  
+dirt 120 480  
+dirt 120 440  
+dirt 120 400  
+dirt 120 360  
+dirt 120 320  
+dirt 120 280  
+dirt 120 240  
+dirt 840 680  
+dirt 800 680  
+dirt 80 720  
+dirt 160 720  
+dirt 160 640  
+dirt 80 640  
+dirt 160 560  
+dirt 80 560  
+dirt 160 480  
+dirt 80 480  
+dirt 160 400  
+dirt 80 400  
+dirt 160 320  
+dirt 80 320  
+dirt 160 240  
+dirt 80 240  
+cook 680 600  
+cook 600 600  
+dirt 600 640  
+dirt 640 640  
+dirt 680 640  
+dirt 480 560  
+dirt 440 560  
+dirt 400 560  
+dirt 560 440  
+dirt 600 440  
+dirt 640 440  
+dirt 680 440  
+dirt 720 320  
+dirt 760 320  
+dirt 800 320  
+dirt 840 320  
+board 480 320  
+board 440 320  
+board 400 320  
+board 360 320  
+board 320 320  
+board 360 280  
+board 400 280  
+board 440 280  
+board 440 360  dekor
+board 440 400  dekor
+board 440 440  dekor
+board 440 480  dekor
+board 440 520  dekor
+board 440 560  dekor
+board 440 600  dekor
+board 440 640  dekor
+board 440 680  dekor
+board 440 720  dekor
+board 360 360  dekor
+board 360 400  dekor
+board 360 440  dekor
+board 360 480  dekor
+board 360 520  dekor
+board 360 560  dekor
+board 360 600  dekor
+board 360 640  dekor
+board 360 680  dekor
+board 360 720  dekor
+mega_cook 200 720  
+mega_cook 240 720  
+mega_cook 280 720  
+mega_cook 200 680  
+mega_cook 240 680  
+mega_cook 280 680  
+mega_cook 560 400  
+mega_cook 600 400  
+mega_cook 720 280  
+mega_cook 760 280  
+mega_cook 800 280  
+mega_cook 840 280  
+stone_wall 1000 240
+dirt 1000 280  
+dirt 1000 320  
+dirt 1000 360  
+dirt 1000 400  
+dirt 1000 440  
+dirt 1000 480  
+dirt 1000 520  
+dirt 1000 560  
+dirt 1000 600  
+dirt 1000 640  
+dirt 1000 680  
+dirt 1000 720  
+dirt 200 240  
+bush 0 720  
+pos 400 240  
+dirt 880 120  
+dirt 840 40  
+dirt 840 80  
+dirt 880 160  
+dirt 920 200  
+dirt 800 40  
+dirt 840 120  
+dirt 880 200  
+dirt 800 120  
+dirt 800 80  
+dirt 800 0  
+dirt 840 160  
