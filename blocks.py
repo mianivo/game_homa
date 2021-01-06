@@ -31,11 +31,12 @@ class Blocks(sprite.Sprite):
 
     def update(self, *args, **kwargs) -> None:
         if self.sleep_block:
+            self.time_disappear()
+        if self.sleep_block or self.without:
             if not self.sleep_now:
                 self.image = self.start_image
             else:
                 self.image = self.empty_image
-            self.time_disappear()
 
     def unique_properties(self, hero):
         pass
@@ -79,12 +80,13 @@ class Rainbow_blocks(Blocks):
         self.image_count = 0
         self.max_count = 17
 
-    def change_image(self):
-        self.image = self.image_list[self.image_count]
-        self.image_count += 1
-        if self.image_count > self.max_count:
-            self.image_count = 0
+    def update(self):
+        if not self.sleep_now:
+            self.image = self.image_list[self.image_count]
+            self.image_count += 1
+            if self.image_count > self.max_count:
+                self.image_count = 0
+        else:
+            self.image = self.empty_image
 
-    def draw(self, window):
-        Blocks.draw(self, window)
-        self.change_image()
+

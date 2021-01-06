@@ -53,6 +53,7 @@ class Level:
                 except:
                     pass
         self.load_level(file_name)
+        self.all_sprites_group.update()  # Необходимо для корректного начала уровня(иначе блоки вначеле "моргают")
 
     def load_level(self, file_name):
         with open(script_dir + file_name) as file_object:
