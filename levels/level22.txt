@@ -1,4 +1,3 @@
-dirt 0 760
 dirt 40 760
 dirt 80 760
 dirt 120 760
@@ -23,24 +22,24 @@ dirt 840 760
 dirt 880 760
 dirt 920 760
 dirt 960 760
-dirt 0 0
-dirt 0 160
-dirt 0 200
-dirt 0 240
-dirt 0 280
-dirt 0 320
-dirt 0 360
-dirt 0 400
-dirt 0 440
-dirt 0 480
-dirt 0 520
-dirt 0 560
-dirt 0 600
-dirt 0 640
-dirt 0 680
-dirt 0 720
-dirt 0 760
-dirt 0 0
+dirt 1000 760
+dirt 40 0
+dirt 40 160
+dirt 40 200
+dirt 40 240
+dirt 40 280
+dirt 40 320
+dirt 40 360
+dirt 40 400
+dirt 40 440
+dirt 40 480
+dirt 40 520
+dirt 40 560
+dirt 40 600
+dirt 40 640
+dirt 40 680
+dirt 40 720
+dirt 40 760
 dirt 40 0
 dirt 80 0
 dirt 120 0
@@ -65,67 +64,67 @@ dirt 840 0
 dirt 880 0
 dirt 920 0
 dirt 960 0
-dirt 960 720
-dirt 960 680
-dirt 960 640
-dirt 960 600
-dirt 960 560
-dirt 960 520
-dirt 960 480
-dirt 960 440
-dirt 960 400
-dirt 960 360
-dirt 960 320
-dirt 960 280
-dirt 960 280
-dirt 960 240
-dirt 960 200
-dirt 960 160
-dirt 960 120
-dirt 960 80
-dirt 960 40
-rainbow_block 0 40  without 0
-rainbow_block 0 40  without 0
-rainbow_block 0 80  without 0
-rainbow_block 0 120  without 0
-Homa 80 50  
-spike 40 160  
+dirt 1000 0
+dirt 1000 720
+dirt 1000 680
+dirt 1000 640
+dirt 1000 600
+dirt 1000 560
+dirt 1000 520
+dirt 1000 480
+dirt 1000 440
+dirt 1000 400
+dirt 1000 360
+dirt 1000 320
+dirt 1000 280
+dirt 1000 280
+dirt 1000 240
+dirt 1000 200
+dirt 1000 160
+dirt 1000 120
+dirt 1000 80
+dirt 1000 40
+rainbow_block 40 40  without 0
+rainbow_block 40 40  without 0
+rainbow_block 40 80  without 0
+rainbow_block 40 120  without 0
+Homa 120 50  
 spike 80 160  
-spike 120 320  
+spike 120 160  
 spike 160 320  
-spike 40 480  
-spike 80 480  
-spike 120 640  
-spike 160 640  
-spike 260 140  
-spike 280 480  
-spike 200 680  
-spike 320 720  
 spike 200 320  
-stone_wall 360 720  without 1
-stone_wall 440 720  without 1
-stone_wall 440 720  without 1
-stone_wall 400 680  without 1
-stone_wall 400 640  without 1
+spike 80 480  
+spike 120 480  
+spike 160 640  
+spike 200 640  
+spike 300 140  
+spike 320 480  
+spike 240 680  
+spike 360 720  
+spike 240 320  
+stone_wall 400 720  without 1
+stone_wall 480 720  without 1
+stone_wall 480 720  without 1
+stone_wall 440 680  without 1
+stone_wall 440 640  without 1
+stone_wall 440 600  without 1
+stone_wall 480 600  without 1
+stone_wall 480 600  without 1
 stone_wall 400 600  without 1
-stone_wall 440 600  without 1
-stone_wall 440 600  without 1
-stone_wall 360 600  without 1
-stone_wall 480 640  without 1
-stone_wall 320 640  without 1
-stone_wall 320 560  without 1
-stone_wall 400 560  without 1
-stone_wall 480 560  without 1
-esh 820 80  5 5
-gold 880 200  sleep 1
+stone_wall 520 640  without 1
+stone_wall 360 640  without 1
+stone_wall 360 560  without 1
+stone_wall 440 560  without 1
+stone_wall 520 560  without 1
+esh 860 80  5 5
 gold 920 200  sleep 1
-gold 800 200  sleep 1
+gold 960 200  sleep 1
 gold 840 200  sleep 1
-spike 800 720  
+gold 880 200  sleep 1
 spike 840 720  
 spike 880 720  
 spike 920 720  
-spike 480 720  
+spike 960 720  
 spike 520 720  
 spike 560 720  
 spike 600 720  
@@ -133,39 +132,40 @@ spike 640 720
 spike 680 720  
 spike 720 720  
 spike 760 720  
-dirt 640 560  sleep 1
-dirt 800 560  sleep 0
-dirt 920 440  sleep 1
-dirt 920 320  sleep 0
-stone_wall 160 680  without 1
-rainbow_block 640 200  without 1
-rainbow_block 640 200  without 1
-board 360 120  dekor
-board 360 160  dekor
-board 360 200  dekor
-board 360 240  dekor
-board 360 80  dekor
-board 400 80  dekor
-board 360 280  dekor
+spike 800 720  
+dirt 680 560  sleep 1
+dirt 840 560  sleep 0
+dirt 960 440  sleep 1
+dirt 960 320  sleep 0
+stone_wall 200 680  without 1
+rainbow_block 680 200  without 1
+rainbow_block 680 200  without 1
+board 400 120  dekor
 board 400 160  dekor
-board 440 160  dekor
+board 400 200  dekor
+board 400 240  dekor
+board 400 80  dekor
 board 440 80  dekor
-spike 360 720  
+board 400 280  dekor
+board 440 160  dekor
+board 480 160  dekor
+board 480 80  dekor
 spike 400 720  
 spike 440 720  
-spike 600 240  
-spike 480 240  
-spike 520 400  
+spike 480 720  
+spike 640 240  
+spike 520 240  
 spike 560 400  
+spike 600 400  
+dirt 541 374  without 1
+dirt 960 560  sleep 0
 dirt 501 374  without 1
-dirt 920 560  sleep 0
 dirt 461 374  without 1
-dirt 421 374  without 1
-dirt 320 280  without 1
-dirt 320 160  without 1
-dirt 280 120  without 1
-dirt 160 120  without 1
-dirt 40 120  without 1
-dirt 160 40  sleep 0
-rainbow_block 400 720  
-spike 920 360
+dirt 360 280  without 1
+dirt 360 160  without 1
+dirt 320 120  without 1
+dirt 200 120  without 1
+dirt 80 120  without 1
+dirt 200 40  sleep 0
+rainbow_block 440 720  
+spike 960 360

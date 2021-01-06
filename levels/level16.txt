@@ -1,4 +1,3 @@
-board 0 760
 board 40 760
 board 80 760
 board 120 760
@@ -23,25 +22,25 @@ board 840 760
 board 880 760
 board 920 760
 board 960 760
-board 0 0
-board 0 160
-board 0 200
-board 0 240
-board 0 280
-board 0 320
-board 0 360
-board 0 400
-board 0 440
-board 0 480
-board 0 520
-board 0 560
-board 0 600
-board 0 640
-board 0 680
-board 0 720
-board 0 760
-board 0 0
-board 120 0
+board 1000 760
+board 40 0
+board 40 160
+board 40 200
+board 40 240
+board 40 280
+board 40 320
+board 40 360
+board 40 400
+board 40 440
+board 40 480
+board 40 520
+board 40 560
+board 40 600
+board 40 640
+board 40 680
+board 40 720
+board 40 760
+board 40 0
 board 160 0
 board 200 0
 board 240 0
@@ -63,27 +62,27 @@ board 840 0
 board 880 0
 board 920 0
 board 960 0
-board 960 720
-board 960 680
-board 960 640
-board 960 600
-board 960 560
-board 960 520
-board 960 480
-board 960 440
-board 960 400
-board 960 360
-board 960 320
-board 960 280
-board 960 280
-board 960 240
-board 960 200
-board 960 160
-board 960 120
-board 960 80
-board 960 40
-board 0 120   
-board 40 120  
+board 1000 0
+board 1000 720
+board 1000 680
+board 1000 640
+board 1000 600
+board 1000 560
+board 1000 520
+board 1000 480
+board 1000 440
+board 1000 400
+board 1000 360
+board 1000 320
+board 1000 280
+board 1000 280
+board 1000 240
+board 1000 200
+board 1000 160
+board 1000 120
+board 1000 80
+board 1000 40
+board 40 120   
 board 80 120  
 board 120 120  
 board 160 120  
@@ -104,6 +103,8 @@ board 720 120
 board 760 120  
 board 800 120  
 board 840 120  
+board 880 120  
+board 960 240  
 board 920 240  
 board 880 240  
 board 840 240  
@@ -124,48 +125,47 @@ board 280 240
 board 240 240  
 board 200 240  
 board 160 240  
-board 120 240  
-spike 40 240  
-board 40 360  
+spike 80 240  
 board 80 360  
 board 120 360  
-board 120 320  without 1
-board 120 280  without 1
-board 40 600  
-board 80 600  
-board 200 680  
-board 320 600  
-board 440 680  
-board 520 600  
-board 680 680  
-board 840 680  
-board 840 560  
-board 920 440  
-board 800 400  
-board 680 400  
-board 560 400  
-board 440 400  
-board 280 440  sleep 1
-board 160 360
-spike 120 720  
-spike 40 720  
-spike 280 720  
-spike 360 720  
-spike 600 720  
-spike 760 720  
-spike 920 720  
-esh 80 80 230 230
-Homa 60 440  
-board 40 0  
-board 80 0  
+board 160 360  
 board 160 320  without 1
 board 160 280  without 1
-board 200 360  without 1
+board 80 600  
+board 120 600  
+board 240 680  
+board 360 600  
+board 480 680  
+board 560 600  
+board 720 680  
+board 880 680  
+board 880 560  
+board 960 440  
+board 840 400  
+board 720 400  
+board 600 400  
+board 480 400  
+board 320 440  sleep 1
+board 200 360
+spike 160 720  
+spike 80 720  
+spike 320 720  
+spike 400 720  
+spike 640 720  
+spike 800 720  
+spike 960 720  
+esh 120 80 230 230
+Homa 100 440  
+board 80 0  
+board 120 0  
 board 200 320  without 1
-board 240 280  without 1
-board 280 360  without 1
-board 280 320  without 1
-board 280 280  without 1
-board 240 360  without 1
 board 200 280  without 1
-mega_cook 0 80
+board 240 360  without 1
+board 240 320  without 1
+board 280 280  without 1
+board 320 360  without 1
+board 320 320  without 1
+board 320 280  without 1
+board 280 360  without 1
+board 240 280  without 1
+mega_cook 40 80

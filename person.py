@@ -1,16 +1,16 @@
-from pygame import image, Rect
+from pygame import image, Rect, sprite
 import time
 from script_dir import script_dir
 
 
-class Person:
-    def __init__(self, x, y, image_list_left, image_list_right, speed=5, hp=None, name=''):
+class Person(sprite.Sprite):
+    def __init__(self, x, y, image_list_left, image_list_right, speed=5, hp=None, name='', group=None):
         self.image_list_right = [image.load(script_dir + im) for im in
                                  image_list_right]  # Загружаем изображения по указаным путям
         self.image_list_left = [image.load(script_dir + im) for im in image_list_left]
         self.anim_count = 0
         self.how_much_animations = len(self.image_list_right)
-        self.image_now = self.image_list_right[0]
+        self.image = self.image_list_right[0]
 
         self.rect = self.image_list_right[0].get_rect()
         width, height = self.rect.bottomright
@@ -35,6 +35,9 @@ class Person:
 
         self.cook_count = 0
         self.get_damage = False
+
+        super().__init__(group)
+
 
     def __str__(self):
         return f'Персонаж - {self.name}. Координаты: {self.rect.x, self.rect.y}.' \
@@ -106,12 +109,12 @@ class Person:
         if self.anim_count >= self.how_much_animations:
             self.anim_count = 0
         if self.is_go_right:
-            self.image_now = self.image_list_right[self.anim_count]
+            self.image = self.image_list_right[self.anim_count]
         elif self.is_go_left:
-            self.image_now = self.image_list_left[self.anim_count]
+            self.image = self.image_list_left[self.anim_count]
 
     def draw(self, window):
-        window.blit(self.image_now, (self.rect.topright))
+        window.blit(self.image, (self.rect.topright))
 
     def in_other_rect(self, x=0, y=0):
         '''Если прерсонаж пападет в блок, выталкивает его, причем не всегда в первоначальное положение.

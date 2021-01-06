@@ -1,4 +1,3 @@
-board 0 760
 board 40 760
 board 80 760
 board 120 760
@@ -23,78 +22,79 @@ board 840 760
 board 880 760
 board 920 760
 board 960 760
-board 0 0
+board 1000 760
+board 40 0
+board 1000 720
+board 1000 680
+board 1000 640
+board 1000 600
+board 1000 560
+board 1000 520
+board 1000 480
+board 1000 440
+board 1000 400
+board 1000 360
+board 1000 320
+board 1000 280
+board 1000 280
+board 1000 240
+board 1000 200
+board 1000 160
+board 1000 120
+board 1000 80
+board 1000 40
 board 960 720
 board 960 680
-board 960 640
-board 960 600
-board 960 560
-board 960 520
-board 960 480
-board 960 440
-board 960 400
-board 960 360
-board 960 320
-board 960 280
-board 960 280
-board 960 240
-board 960 200
-board 960 160
-board 960 120
-board 960 80
-board 960 40
-board 920 720
 board 920 680
-board 880 680
-board 880 720
+board 920 720
+board 960 560
 board 920 560
-board 880 560
-board 40 720
 board 80 720
-board 40 680
+board 120 720
 board 80 680
-board 40 560
+board 120 680
 board 80 560
-bush 100 640
-bush 860 640
-rainbow_block 40 160 without 1 without 1
+board 120 560
+bush 140 640
+bush 900 640
+rainbow_block 80 160 without 1 without 1
+rainbow_block 120 200 without 1 without 1
+rainbow_block 160 240 without 1 without 1
+rainbow_block 200 280 without 1 without 1
+rainbow_block 240 320 without 1 without 1
+rainbow_block 280 360 without 1 without 1
+rainbow_block 320 400 without 1 without 1
+rainbow_block 360 440 without 1 without 1
+rainbow_block 400 480 without 1 without 1
+rainbow_block 440 520 without 1 without 1
+rainbow_block 480 560 without 1 without 1
+rainbow_block 520 600 without 1 without 1
+rainbow_block 560 640 without 1 without 1
+rainbow_block 520 640 without 1 without 1
+rainbow_block 480 600 without 1 without 1
+rainbow_block 440 560 without 1 without 1
+rainbow_block 400 520 without 1 without 1
+rainbow_block 360 480 without 1 without 1
+rainbow_block 320 440 without 1 without 1
+rainbow_block 280 400 without 1 without 1
 rainbow_block 80 200 without 1 without 1
 rainbow_block 120 240 without 1 without 1
 rainbow_block 160 280 without 1 without 1
 rainbow_block 200 320 without 1 without 1
-rainbow_block 240 360 without 1 without 1
-rainbow_block 280 400 without 1 without 1
-rainbow_block 320 440 without 1 without 1
-rainbow_block 360 480 without 1 without 1
-rainbow_block 400 520 without 1 without 1
-rainbow_block 440 560 without 1 without 1
-rainbow_block 480 600 without 1 without 1
-rainbow_block 520 640 without 1 without 1
-rainbow_block 480 640 without 1 without 1
-rainbow_block 440 600 without 1 without 1
-rainbow_block 400 560 without 1 without 1
-rainbow_block 360 520 without 1 without 1
-rainbow_block 320 480 without 1 without 1
-rainbow_block 280 440 without 1 without 1
-rainbow_block 240 400 without 1 without 1
-rainbow_block 40 200 without 1 without 1
-rainbow_block 80 240 without 1 without 1
-rainbow_block 120 280 without 1 without 1
-rainbow_block 160 320 without 1 without 1
-esh 560 560  
-boss_1 300 -2500
-board 0 720  
-board 0 680  
-board 0 640  
-board 0 600  
-board 0 560  
-board 0 520  
-board 0 480  
-board 0 440  
-board 0 400  
-board 0 360  
-board 0 320  
-board 0 280  
-board 0 240  
-board 0 200  
-board 0 160  
+esh 600 560  
+boss_1 340 -2500
+board 40 720  
+board 40 680  
+board 40 640  
+board 40 600  
+board 40 560  
+board 40 520  
+board 40 480  
+board 40 440  
+board 40 400  
+board 40 360  
+board 40 320  
+board 40 280  
+board 40 240  
+board 40 200  
+board 40 160  

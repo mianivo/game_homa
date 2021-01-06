@@ -1,3 +1,7 @@
 ERROR:root:[Errno 2] No such file or directory: 'C:\\Users\\andre\\Рабочий стол\\Игра\\Игра\\game\\levels\\level0.txt'
 ERROR:root:[Errno 2] No such file or directory: 'C:\\Users\\andre\\Рабочий стол\\Игра\\Игра\\game\\levels\\level3.txt'
 ERROR:root:No module named 'keyboard'
+ERROR:root:add() argument after * must be an iterable, not NoneType
+ERROR:root:add() argument after * must be an iterable, not NoneType
+ERROR:root:add() argument after * must be an iterable, not NoneType
+ERROR:root:add() argument after * must be an iterable, not NoneType

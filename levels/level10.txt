@@ -1,4 +1,3 @@
-dirt 0 760
 dirt 40 760
 dirt 80 760
 dirt 120 760
@@ -23,79 +22,78 @@ dirt 840 760
 dirt 880 760
 dirt 920 760
 dirt 960 760
-boss_1 400 -1000
-dirt 0 720  
-dirt 0 680  
-dirt 0 640  
-dirt 0 600  
-dirt 0 560  
-dirt 0 520  
-dirt 0 480  
-dirt 0 440  
-dirt 0 400  
-dirt 0 360  
-dirt 960 720  
-dirt 960 680  
-dirt 960 640  
-dirt 960 600  
-dirt 960 560  
-dirt 960 520  
-dirt 960 480  
-dirt 960 440  
-dirt 960 400  
-dirt 960 360  
-dirt 960 320  
-dirt 960 280  
-dirt 960 240  
-dirt 960 200  
-dirt 960 160  
-dirt 960 120  
-dirt 960 80  
-dirt 0 320  
-dirt 0 280  
-dirt 0 240  
-dirt 0 200  
-dirt 0 160  
-dirt 0 120  
-dirt 0 80  
+dirt 1000 760
+boss_1 440 -1000
 dirt 40 720  
-dirt 920 720  
-bush 760 720  
-bush 240 720  
-dirt 120 600  
-dirt 160 600  
-dirt 840 600  
-dirt 800 600  
+dirt 40 680  
+dirt 40 640  
+dirt 40 600  
+dirt 40 560  
+dirt 40 520  
 dirt 40 480  
-dirt 920 480  
-stone wall 800 440
-stone wall 160 440
-board 240 320  
-board 280 320  sleep 1
+dirt 40 440  
+dirt 40 400  
+dirt 40 360  
+dirt 1000 720  
+dirt 1000 680  
+dirt 1000 640  
+dirt 1000 600  
+dirt 1000 560  
+dirt 1000 520  
+dirt 1000 480  
+dirt 1000 440  
+dirt 1000 400  
+dirt 1000 360  
+dirt 1000 320  
+dirt 1000 280  
+dirt 1000 240  
+dirt 1000 200  
+dirt 1000 160  
+dirt 1000 120  
+dirt 1000 80  
+dirt 40 320  
+dirt 40 280  
+dirt 40 240  
+dirt 40 200  
+dirt 40 160  
+dirt 40 120  
+dirt 40 80  
+dirt 80 720  
+dirt 960 720  
+bush 800 720  
+bush 280 720  
+dirt 160 600  
+dirt 200 600  
+dirt 880 600  
+dirt 840 600  
+dirt 80 480  
+dirt 960 480  
+board 280 320  
 board 320 320  sleep 1
-board 360 320  
-board 400 320  sleep 1
+board 360 320  sleep 1
+board 400 320  
 board 440 320  sleep 1
-board 480 320  
-board 520 320  sleep 1
+board 480 320  sleep 1
+board 520 320  
 board 560 320  sleep 1
-board 600 320  
-board 640 320  sleep 1
+board 600 320  sleep 1
+board 640 320  
 board 680 320  sleep 1
-board 720 320  
-bush 360 280  sleep 1
-bush 600 280  sleep 1
-rainbow_block 280 280  without 1
-esh 320 400  
-rainbow_block 320 240  without 1
-rainbow_block 360 200  without 1
-rainbow_block 680 280  without 1
-rainbow_block 640 240  without 1
-rainbow_block 600 200  without 1
-rainbow_block 400 160  without 1
-rainbow_block 560 160  without 1
-rainbow_block 440 120  without 1
-rainbow_block 520 120  without 1
-rainbow_block 480 80  without 1
-stone_wall 160 400  
-stone_wall 800 400  
+board 720 320  sleep 1
+board 760 320  
+bush 400 280  sleep 1
+bush 640 280  sleep 1
+rainbow_block 320 280  without 1
+esh 360 400  
+rainbow_block 360 240  without 1
+rainbow_block 400 200  without 1
+rainbow_block 720 280  without 1
+rainbow_block 680 240  without 1
+rainbow_block 640 200  without 1
+rainbow_block 440 160  without 1
+rainbow_block 600 160  without 1
+rainbow_block 480 120  without 1
+rainbow_block 560 120  without 1
+rainbow_block 520 80  without 1
+stone_wall 200 400  
+stone_wall 840 400  

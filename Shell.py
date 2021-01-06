@@ -1,9 +1,9 @@
 import pygame
 from script_dir import script_dir
 
-class Shell:
-    def __init__(self, x, y, is_right, is_up, color=(0, 0, 0), dekor_image=pygame.image.load(script_dir +'images\shell\shell_dekor.png')):
-        '''Снаряд для пушки. НАносит урон только главному герою.'''
+class Shell(pygame.sprite.Sprite):
+    def __init__(self, x, y, is_right, is_up, color=(0, 0, 0), dekor_image=pygame.image.load(script_dir +'images\shell\shell_dekor.png'), group=None):
+        '''Снаряд для пушки. Наносит урон только главному герою.'''
         self.image = pygame.image.load(script_dir + 'images\shell\shell.png')
         self.x_cor = x
         self.y_cor = y
@@ -18,6 +18,8 @@ class Shell:
         self.dekor_image = dekor_image
         self.y_cor_fall = -15 if is_up else 0
         self.fall_count = 0
+
+        super().__init__(group)
 
 
     def draw(self, window):

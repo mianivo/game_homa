@@ -15,6 +15,15 @@ from script_dir import script_dir
 
 class Level:
     def __init__(self, level_number, complexity):
+        self.blocks_group = pygame.sprite.Group()
+        self.persons_group = pygame.sprite.Group()
+        self.boss_group = pygame.sprite.Group()
+        self.item_to_take_group = pygame.sprite.Group()
+        self.magic_group = pygame.sprite.Group()
+        self.shell_group = pygame.sprite.Group()
+
+        self.all_sprites_group = pygame.sprite.Group()
+
         self.complexiry = complexity  # Сложность
         self.level_number = level_number
         file_name = 'levels\level' + str(level_number) + '.txt'
@@ -29,9 +38,6 @@ class Level:
             self.image_text = pygame.font.SysFont('arial', 36).render('Это реально пройти', 1, (255, 0, 0))
         self.level_size = (1000, 800)
         self.main_hero = None
-        with open(script_dir + file_name) as file_object:
-            self.level_file = file_object.read()
-
         self.boss = None  # босс
         self.blocks_on_level_list = []  # список всех блоков
         self.person_list = []  # Список врагов
@@ -39,6 +45,18 @@ class Level:
         self.magic_list = []  # магия главного героя
         self.shell_list = []  # Снаряды и магия финального босса
 
+        if self.main_hero == None:
+            self.main_hero = Homa(340, 300, complexity=self.complexiry, group=[self.persons_group, self.all_sprites_group])
+            for person in self.person_list:
+                try:
+                    person.set_hero(self.main_hero)
+                except:
+                    pass
+        self.load_level(file_name)
+
+    def load_level(self, file_name):
+        with open(script_dir + file_name) as file_object:
+            self.level_file = file_object.read()
         for string in self.level_file.split('\n'):
             object, x_cor, y_cor, *dop = string.split()
             sleep = False
@@ -79,83 +97,94 @@ class Level:
             if 'dirt' == object:
                 self.blocks_on_level_list.append(
                     Blocks(int(x_cor), int(y_cor), sleep_block=sleep, sleep_now=sleep_now, without=without,
-                           without_now=without_now, is_dekor=is_dekor))
+                           without_now=without_now, is_dekor=is_dekor, group=[self.blocks_group, self.all_sprites_group]))
             elif 'stone_wall' == object:
                 self.blocks_on_level_list.append(
                     Blocks(int(x_cor), int(y_cor), where_image='images\Blocks\stone_wall.png', sleep_block=sleep,
-                           sleep_now=sleep_now, without=without, without_now=without_now, is_dekor=is_dekor))
+                           sleep_now=sleep_now, without=without, without_now=without_now,
+                           is_dekor=is_dekor, group=[self.blocks_group, self.all_sprites_group]))
             elif 'board' == object:
                 self.blocks_on_level_list.append(
                     Blocks(int(x_cor), int(y_cor), where_image='images\Blocks\\board.png', sleep_block=sleep,
-                           sleep_now=sleep_now, without=without, without_now=without_now, is_dekor=is_dekor))
+                           sleep_now=sleep_now, without=without, without_now=without_now,
+                           is_dekor=is_dekor, group=[self.blocks_group, self.all_sprites_group]))
             elif 'bush' == object:
                 self.blocks_on_level_list.append(
                     Dekor(x=int(x_cor), y=int(y_cor), where_image='images\dekor\Bush.png', sleep_block=sleep,
-                          sleep_now=sleep_now, without=without, without_now=without_now, is_dekor=is_dekor))
+                          sleep_now=sleep_now, without=without, without_now=without_now, is_dekor=is_dekor, group=[self.blocks_group, self.all_sprites_group]))
             elif 'gold' == object:
                 self.blocks_on_level_list.append(
                     Blocks(int(x_cor), int(y_cor), where_image='images\Blocks\gold.png', sleep_block=sleep,
-                           sleep_now=sleep_now, without=without, without_now=without_now, is_dekor=is_dekor))
+                           sleep_now=sleep_now, without=without, without_now=without_now, is_dekor=is_dekor, group=[self.blocks_group, self.all_sprites_group]))
             elif 'rainbow_block' == object:
                 self.blocks_on_level_list.append(
                     Rainbow_blocks(int(x_cor), int(y_cor), sleep_block=sleep, sleep_now=sleep_now, without=without,
-                                   without_now=without_now, is_dekor=is_dekor))
+                                   without_now=without_now, is_dekor=is_dekor, group=[self.blocks_group, self.all_sprites_group]))
             elif 'cook' == object:
-                self.item_list.append(Cookies(int(x_cor), int(y_cor)))
+                self.item_list.append(Cookies(int(x_cor), int(y_cor), group=[self.item_to_take_group, self.all_sprites_group]))
             elif 'mega_cook' == object:
-                self.item_list.append(Cookies(int(x_cor), int(y_cor), mega_cook=True))
+                self.item_list.append(Cookies(int(x_cor), int(y_cor), mega_cook=True, group=[self.item_to_take_group, self.all_sprites_group]))
             elif 'final_boss_wall' == object:
                 self.blocks_on_level_list.append(
                     Blocks(int(x_cor), int(y_cor), sleep_block=sleep, sleep_now=sleep_now, without=without,
                            without_now=without_now, is_dekor=is_dekor,
-                           where_image='images\Blocks\\final_boss_wall.png'))
+                           where_image='images\Blocks\\final_boss_wall.png'), group=[self.blocks_group, self.all_sprites_group])
             elif 'shell' == object:
-                self.shell_list.append(Shell(int(x_cor), int(y_cor), is_right=is_right, is_up=is_up))
+                self.shell_list.append(Shell(int(x_cor), int(y_cor),
+                                             is_right=is_right, is_up=is_up, group=[self.shell_group, self.all_sprites_group]))
             elif 'gun' == object:
-                self.person_list.append(Gun(int(x_cor), int(y_cor), speed_atack=speed_atack, position=position))
+                self.person_list.append(Gun(int(x_cor), int(y_cor), speed_atack=speed_atack,
+                                            position=position, group=[self.persons_group, self.all_sprites_group]))
             elif 'esh' == object:
                 self.person_list.append(Enemy(x=int(x_cor), y=int(y_cor), how_much_go_right=int(dop[0]) if dop else 30,
                                               how_much_go_left=int(dop[0]) if dop else 30,
-                                              hp=800 if self.level_number != '19' else 1))
+                                              hp=800 if self.level_number != '19' else 1, group=[self.persons_group, self.all_sprites_group]))
             elif 'spike' == object:
-                self.blocks_on_level_list.append(Spikes(x=int(x_cor), y=int(y_cor)))
+                self.blocks_on_level_list.append(Spikes(x=int(x_cor), y=int(y_cor), group=[self.blocks_group, self.all_sprites_group]))
             elif 'squirrel' == object:
                 self.person_list.append(Squirrel(x=int(x_cor), y=int(y_cor), main_hero=self.main_hero,
                                                  how_much_go_right=how_much_go if how_much_go else 40,
                                                  how_much_go_left=how_much_go if how_much_go else 40,
-                                                 is_go_right=is_go_right))
+                                                 is_go_right=is_go_right, group=[self.persons_group, self.all_sprites_group]))
             elif 'Homa' == object:
-                self.main_hero = Homa(int(x_cor), int(y_cor), complexity=self.complexiry)
+                if self.main_hero:
+                    self.persons_group.remove(self.main_hero)
+                self.main_hero = Homa(int(x_cor), int(y_cor), complexity=self.complexiry, group=[self.persons_group, self.all_sprites_group])
             elif 'boss_1' == object:
-                self.boss = Boss(x=int(x_cor), y=int(y_cor))
+                self.boss = Boss(x=int(x_cor), y=int(y_cor), group=[self.persons_group, self.all_sprites_group])
             elif 'person_boss_1' == object:
-                self.person_list.append(Boss(x=int(x_cor), y=int(y_cor)))
-        if self.main_hero == None:
-            self.main_hero = Homa(300, 300, complexity=self.complexiry)
-            for person in self.person_list:
-                try:
-                    person.set_hero(self.main_hero)
-                except:
-                    pass
-        self.okr = 40  # удалить
+                self.person_list.append(Boss(x=int(x_cor), y=int(y_cor), group=[self.persons_group, self.all_sprites_group]))
 
     def draw(self, window):
         '''Рисование объектов уровня(всё кроме кнопки выхода с уровня и фона)'''
-        if self.level_number != '17':
+        self.blocks_group.draw(window)
+        self.persons_group.draw(window)
+        self.shell_group.draw(window)
+        self.boss_group.draw(window)
+        self.item_to_take_group.draw(window)
+        self.magic_group.draw(window)
+        self.all_sprites_group.update()
+
+        self.main_hero.draw_info(window)
+        for person in self.person_list:
+            if not person.is_dead:
+                person.draw(window)
+
+        if False:
             for item in self.item_list:
                 item.draw(window)
-        self.main_hero.draw(window)
-        for block in self.blocks_on_level_list:
-            block.draw(window)
-        for person in self.person_list:
-            if person.is_dead == False:
-                person.draw(window)
-        for magic in self.magic_list + self.shell_list:
-            magic.draw(window)
-            magic.move()
-        self.main_hero.draw_info(window)
-        if self.boss:
-            self.boss.draw(window)
+            self.main_hero.draw(window)
+            for block in self.blocks_on_level_list:
+                block.draw(window)
+            for person in self.person_list:
+                if person.is_dead == False:
+                    person.draw(window)
+            for magic in self.magic_list + self.shell_list:
+                magic.draw(window)
+                magic.move()
+            self.main_hero.draw_info(window)
+            if self.boss:
+                self.boss.draw(window)
         if self.image_text:
             window.blit(self.image_text, (600, 10))
 
@@ -216,7 +245,7 @@ class Level:
                 self.__init__(level_number='202', complexity=self.complexiry)
                 self.image_text = pygame.font.SysFont('arial', 36).render('Финальный босс!', 1, (0, 255, 0))
                 pygame.mixer.music.load(script_dir + 'music\Terraria_Music_2.mp3')
-                self.boss = Boss2(500, 500)
+                self.boss = Boss2(500, 500, group=self.boss_group)
                 self.boss.main_hero = self.main_hero
                 pygame.mixer.music.play(-1)
             elif self.level_number == '20':
@@ -251,34 +280,37 @@ class Level:
             else:
                 if person.do_heart:
                     if random.randrange(0, 2):
-                        self.item_list.append(Hearts(*person.rect.topright))
+                        self.item_list.append(Hearts(*person.rect.topright, group=[self.item_to_take_group, self.all_sprites_group]))
                     else:
-                        self.item_list.append(Cookies(*person.rect.topright))
+                        self.item_list.append(Cookies(*person.rect.topright, group=[self.item_to_take_group, self.all_sprites_group]))
                     person.do_heart = False
+                self.persons_group.remove(person)
         if all_dead and self.person_list:
             for block in self.blocks_on_level_list:
                 block.enemy_disappear()
             self.person_list.clear()
             if self.level_number == '203':
-                self.person_list.append(Homa(x=800, y=-100, speed=5))
+                self.person_list.append(Homa(x=800, y=-100, speed=5, group=[self.persons_group, self.all_sprites_group]))
         if self.boss:
             self.boss.give_object_list([i for i in self.blocks_on_level_list if not i.sleep_now] + self.item_list + [
                 self.main_hero] + self.magic_list)
             if self.boss.enemy_move():
                 for i in range(random.randrange(2, 5)):
                     self.person_list.append(Enemy(x=random.randrange(200, 700), y=random.randrange(50, 800) - 900,
-                                                  speed=random.randrange(3, 6), hp=random.randrange(400, 800)))
+                                                  speed=random.randrange(3, 6), hp=random.randrange(400, 800), group=[self.persons_group, self.all_sprites_group]))
                 for _ in range(random.randrange(0, 4)):
                     sq = Squirrel(x=random.randrange(200, 700), y=random.randrange(50, 800) - 900,
-                                  speed=random.randrange(4, 6), hp=random.randrange(600, 1000))
+                                  speed=random.randrange(4, 6), hp=random.randrange(600, 1000), group=[self.persons_group, self.all_sprites_group])
                     sq.set_hero(self.main_hero)
                     self.person_list.append(sq)
                 if self.boss.type == 'f':
                     gun = Gun(x=random.randrange(100, 700), y=random.randrange(50, 800) - 1200, speed_atack=5,
-                              position=random.randrange(0, 4))
+                              position=random.randrange(0, 4) ,group=[self.persons_group, self.all_sprites_group])
                     self.person_list.append(gun)
             if self.boss.type == 'f':
                 boss_magic = self.boss.do_magic()
+                self.all_sprites_group.add(boss_magic)
+                self.magic_group.add(boss_magic)
                 if boss_magic:
                     self.shell_list.append(boss_magic)
 

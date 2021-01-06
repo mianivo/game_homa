@@ -1,5 +1,4 @@
-Homa 560 720  
-dirt 0 760
+Homa 600 720  
 dirt 40 760
 dirt 80 760
 dirt 120 760
@@ -24,24 +23,24 @@ dirt 840 760
 dirt 880 760
 dirt 920 760
 dirt 960 760
-dirt 0 0
-dirt 0 160
-dirt 0 200
-dirt 0 240
-dirt 0 280
-dirt 0 320
-dirt 0 360
-dirt 0 400
-dirt 0 440
-dirt 0 480
-dirt 0 520
-dirt 0 560
-dirt 0 600
-dirt 0 640
-dirt 0 680
-dirt 0 720
-dirt 0 760
-dirt 0 0
+dirt 1000 760
+dirt 40 0
+dirt 40 160
+dirt 40 200
+dirt 40 240
+dirt 40 280
+dirt 40 320
+dirt 40 360
+dirt 40 400
+dirt 40 440
+dirt 40 480
+dirt 40 520
+dirt 40 560
+dirt 40 600
+dirt 40 640
+dirt 40 680
+dirt 40 720
+dirt 40 760
 dirt 40 0
 dirt 80 0
 dirt 120 0
@@ -66,90 +65,91 @@ dirt 840 0
 dirt 880 0
 dirt 920 0
 dirt 960 0
-dirt 960 720
-dirt 960 680
-dirt 960 640
-dirt 960 600
-dirt 960 560
-dirt 960 520
-dirt 960 480
-dirt 960 440
-dirt 960 400
-dirt 960 360
-dirt 960 320
-dirt 960 280
-dirt 960 280
-dirt 960 240
-dirt 960 200
-dirt 960 160
-dirt 960 120
-dirt 960 80
-dirt 960 40
-stone_wall 120 160  
-dirt 920 640  
-dirt 800 520  
-dirt 920 400  
-dirt 800 280  
-dirt 920 200  
-dirt 800 120  
-dirt 40 320  
+dirt 1000 0
+dirt 1000 720
+dirt 1000 680
+dirt 1000 640
+dirt 1000 600
+dirt 1000 560
+dirt 1000 520
+dirt 1000 480
+dirt 1000 440
+dirt 1000 400
+dirt 1000 360
+dirt 1000 320
+dirt 1000 280
+dirt 1000 280
+dirt 1000 240
+dirt 1000 200
+dirt 1000 160
+dirt 1000 120
+dirt 1000 80
+dirt 1000 40
+stone_wall 160 160  
+dirt 960 640  
+dirt 840 520  
+dirt 960 400  
+dirt 840 280  
+dirt 960 200  
+dirt 840 120  
 dirt 80 320  
-dirt 40 600  
+dirt 120 320  
 dirt 80 600  
 dirt 120 600  
 dirt 160 600  
 dirt 200 600  
-board 200 560  
-gun 80 560  3 1
-board 240 520  
-board 240 560  
 dirt 240 600  
-gun 80 280  3 0
-dirt 120 320  
-dirt 40 440  
+board 240 560  
+gun 120 560  3 1
+board 280 520  
+board 280 560  
+dirt 280 600  
+gun 120 280  3 0
+dirt 160 320  
 dirt 80 440  
 dirt 120 440  
-gun 120 400  3 1
-gun 240 720  4 1
-dirt 320 120  
+dirt 160 440  
+gun 160 400  3 1
+gun 280 720  4 1
 dirt 360 120  
-dirt 280 120  
-gun 320 80  5 0
-dirt 480 720  
-dirt 480 680  
-dirt 480 640  
-dirt 440 680  
-dirt 400 720  
+dirt 400 120  
+dirt 320 120  
+gun 360 80  5 0
+dirt 520 720  
+dirt 520 680  
 dirt 520 640  
+dirt 480 680  
+dirt 440 720  
 dirt 560 640  
-dirt 600 600  
-gun 480 600  6 1
+dirt 600 640  
+dirt 640 600  
+gun 520 600  6 1
+stone_wall 800 120  
 stone_wall 760 120  
-stone_wall 720 120  
-dirt 280 600  
-squirrel 160 680  
-esh 320 80  15
-esh 80 240  15
-esh 80 280  15
-esh 480 600  15
-dirt 40 200  sleep 1
-mega_cook 0 120  
-mega_cook 0 120 
-mega_cook 0 120 
-board 760 520  sleep 1
-board 760 480  sleep 1
-board 760 440  sleep 1
-board 760 400  sleep 1
-board 760 360  sleep 1
-board 760 320  sleep 1
-board 760 280  sleep 1
-board 760 240  sleep 1
-board 760 200  sleep 1
-squirrel 160 680  
-esh 240 200  
-esh 440 80  
-esh 360 80  
-esh 720 80  
-esh 600 160  
-esh 80 40  
-esh 600 40  
+dirt 320 600  
+squirrel 200 680  
+esh 360 80  15
+esh 120 240  15
+esh 120 280  15
+esh 520 600  15
+dirt 80 200  sleep 1
+mega_cook 40 120  
+mega_cook 40 120 
+mega_cook 40 120 
+board 800 520  sleep 1
+board 800 480  sleep 1
+board 800 440  sleep 1
+board 800 400  sleep 1
+board 800 360  sleep 1
+board 800 320  sleep 1
+board 800 280  sleep 1
+board 800 240  sleep 1
+board 800 200  sleep 1
+squirrel 200 680  
+esh 280 200  
+esh 480 80  
+esh 400 80  
+esh 760 80  
+esh 640 160  
+esh 120 40  
+esh 640 40  

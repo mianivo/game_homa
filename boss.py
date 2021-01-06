@@ -8,12 +8,12 @@ from magic import Magic
 
 
 class Boss(Enemy):
-    def __init__(self, x, y, main=True):
+    def __init__(self, x, y, main=True, group=None):
         Enemy.__init__(self, x, y, image_list_left=['images\esh_king\left0.png', 'images\esh_king\left1.png',
                                                     'images\esh_king\left2.png'],
                        image_list_right=['images\esh_king\\right0.png', 'images\esh_king\\right1.png',
                                          'images\esh_king\\right2.png'], speed=5, hp=10000, name='Ежице!',
-                       how_much_go_right=65, how_much_go_left=65, damage=100)
+                       how_much_go_right=65, how_much_go_left=65, damage=100, group=group)
         self.main_boss = main
         self.fase_time = 0
         self.was_hp = False
@@ -55,14 +55,14 @@ class Boss(Enemy):
 class Boss2(Squirrel, Boss):
     '''Финальный босс.'''
 
-    def __init__(self, x, y):
-        Boss.__init__(self, x, y)
+    def __init__(self, x, y, group):
+        Boss.__init__(self, x, y, group)
         Squirrel.__init__(self, x, y, image_list_left=['images\\final_boss\\final_boss_left_1.png',
                                                        'images\\final_boss\\final_boss_left_2.png',
                                                        'images\\final_boss\\final_boss_left_3.png'],
                           image_list_right=['images\\final_boss\\final_boss_right_1.png',
                                             'images\\final_boss\\final_boss_right_2.png',
-                                            'images\\final_boss\\final_boss_right_3.png'])
+                                            'images\\final_boss\\final_boss_right_3.png'], group=group)
         self.hp = 30500
         self.damage = 100
         self.xp_for_main_hero = 850

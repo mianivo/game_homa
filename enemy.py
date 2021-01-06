@@ -9,8 +9,8 @@ class Enemy(Person):  # Главного героя - хомяка зовут Х
                                   'images\enemys\esh\left3.png'],
                  image_list_right=['images\enemys\esh\Right1.png', 'images\enemys\esh\Right2.png',
                                    'images\enemys\esh\Right3.png'],
-                 speed=4, hp=800, name='Ежице!', how_much_go_right=30, how_much_go_left=30, damage=50):
-        Person.__init__(self, x, y, image_list_left, image_list_right, speed, hp, name)
+                 speed=4, hp=800, name='Ежице!', how_much_go_right=30, how_much_go_left=30, damage=50, group=None):
+        Person.__init__(self, x, y, image_list_left, image_list_right, speed, hp, name, group)
         self.how_much_go_right_start = how_much_go_right
         self.how_much_go_left_start = how_much_go_left
         self.damage = damage
@@ -63,10 +63,9 @@ class Enemy(Person):  # Главного героя - хомяка зовут Х
                 self.do_heart = True
 
     def draw(self, window):
-        Person.draw(self, window)
         if self.get_damage:
             pygame.draw.rect(window, (255, 0, 0),
-                             (self.rect.topright[0] + 10, self.rect.topright[1] - 20, self.hp // 20, 2))
+                             (self.rect.topleft[0] + 10, self.rect.topleft[1] - 20, self.hp // 20, 2))
 
     def __bool__(self):
         return not self.is_dead

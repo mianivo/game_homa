@@ -1,4 +1,3 @@
-dirt 0 760
 dirt 40 760
 dirt 80 760
 dirt 120 760
@@ -10,7 +9,7 @@ dirt 320 760
 dirt 360 760
 dirt 400 760
 dirt 440 760
-dirt 600 760
+dirt 480 760
 dirt 640 760
 dirt 680 760
 dirt 720 760
@@ -20,24 +19,24 @@ dirt 840 760
 dirt 880 760
 dirt 920 760
 dirt 960 760
-dirt 0 0
-dirt 0 160
-dirt 0 200
-dirt 0 240
-dirt 0 280
-dirt 0 320
-dirt 0 360
-dirt 0 400
-dirt 0 440
-dirt 0 480
-dirt 0 520
-dirt 0 560
-dirt 0 600
-dirt 0 640
-dirt 0 680
-dirt 0 720
-dirt 0 760
-dirt 0 0
+dirt 1000 760
+dirt 40 0
+dirt 40 160
+dirt 40 200
+dirt 40 240
+dirt 40 280
+dirt 40 320
+dirt 40 360
+dirt 40 400
+dirt 40 440
+dirt 40 480
+dirt 40 520
+dirt 40 560
+dirt 40 600
+dirt 40 640
+dirt 40 680
+dirt 40 720
+dirt 40 760
 dirt 40 0
 dirt 80 0
 dirt 120 0
@@ -48,7 +47,7 @@ dirt 280 0
 dirt 320 0
 dirt 360 0
 dirt 400 0
-dirt 520 0
+dirt 440 0
 dirt 560 0
 dirt 600 0
 dirt 640 0
@@ -60,167 +59,168 @@ dirt 840 0
 dirt 880 0
 dirt 920 0
 dirt 960 0
-dirt 960 720
-dirt 960 640
-dirt 960 600
-dirt 960 520
-dirt 960 480
-dirt 960 440
-dirt 960 400
-dirt 960 360
-dirt 960 320
-dirt 960 280
-dirt 960 280
-dirt 960 240
-dirt 960 200
-dirt 960 160
-dirt 960 120
-dirt 960 80
-dirt 960 40
-dirt 0 120  
-dirt 0 80  
-dirt 0 40  
-spike 480 720  
+dirt 1000 0
+dirt 1000 720
+dirt 1000 640
+dirt 1000 600
+dirt 1000 520
+dirt 1000 480
+dirt 1000 440
+dirt 1000 400
+dirt 1000 360
+dirt 1000 320
+dirt 1000 280
+dirt 1000 280
+dirt 1000 240
+dirt 1000 200
+dirt 1000 160
+dirt 1000 120
+dirt 1000 80
+dirt 1000 40
+dirt 40 120  
+dirt 40 80  
+dirt 40 40  
 spike 520 720  
 spike 560 720  
-dirt 480 160  
-Homa 480 40  
-dirt 600 720  
+spike 600 720  
 dirt 520 160  
-dirt 360 160  
-dirt 640 160  
-spike 560 200  
+Homa 520 40  
+dirt 640 720  
+dirt 560 160  
+dirt 400 160  
+dirt 680 160  
 spike 600 200  
-spike 400 200  
+spike 640 200  
 spike 440 200  
+spike 480 200  
+dirt 960 600  
+dirt 920 640  
 dirt 920 600  
 dirt 880 640  
-dirt 880 600  
 dirt 840 640  
-dirt 800 640  
-dirt 800 680  
-esh 840 720  10 10
-spike 480 200  
+dirt 840 680  
+esh 880 720  10 10
 spike 520 200  
+spike 560 200  
+board 280 160  
 board 240 160  
 board 200 160  
 board 160 160  
 board 120 160  
 board 80 160  
-board 40 160  
+board 960 160  
 board 920 160  
 board 880 160  
 board 840 160  
-board 800 160  
-squirrel 880 80  go 5
-squirrel 80 80  go 5
-squirrel 840 120  go 5
-squirrel 880 80  go 5
-squirrel 80 80  go 5
-squirrel 80 80  go 5
-dirt 360 720  
-dirt 120 560  
+squirrel 920 80  go 5
+squirrel 120 80  go 5
+squirrel 880 120  go 5
+squirrel 920 80  go 5
+squirrel 120 80  go 5
+squirrel 120 80  go 5
+dirt 400 720  
 dirt 160 560  
 dirt 200 560  
 dirt 240 560  
 dirt 280 560  
+dirt 320 560  
+dirt 800 640  
 dirt 760 640  
 dirt 720 640  
-dirt 680 640  
-esh 720 720  
-dirt 680 560  
-dirt 680 520  
-dirt 680 480  
+esh 760 720  
+dirt 720 560  
+dirt 720 520  
 dirt 720 480  
 dirt 760 480  
 dirt 800 480  
 dirt 840 480  
 dirt 880 480  
 dirt 920 480  
-esh 760 560  10 10
-esh 880 560  
-squirrel 80 680  
+dirt 960 480  
+esh 800 560  10 10
+esh 920 560  
+squirrel 120 680  
+dirt 960 400  
 dirt 920 400  
-dirt 880 400  
-dirt 560 680  
-dirt 520 640  
-dirt 480 600  
+dirt 600 680  
+dirt 560 640  
+dirt 520 600  
+dirt 480 560  
 dirt 440 560  
 dirt 400 560  
 dirt 360 560  
-dirt 320 560  
-dirt 440 600  
-dirt 480 640  
-board 120 440  
-board 120 400  
-board 160 360  
-board 200 320  
+dirt 480 600  
+dirt 520 640  
+board 160 440  
+board 160 400  
+board 200 360  
 board 240 320  
 board 280 320  
 board 320 320  
+board 360 320  
+board 400 360  
+board 440 400  
+board 440 440   
+board 200 400  
+board 240 360  
 board 360 360  
 board 400 400  
-board 400 440   
-board 160 400  
-board 200 360  
-board 320 360  
-board 360 400  
-board 120 520  dekor
-board 160 440  dekor
-board 240 520  dekor
-board 280 520  dekor
 board 160 520  dekor
-board 160 480  dekor
-board 200 480  dekor
 board 200 440  dekor
-board 200 520  dekor
-board 240 480  dekor
-board 200 400  dekor
-board 240 440  dekor
-board 280 480  dekor
+board 280 520  dekor
 board 320 520  dekor
+board 200 520  dekor
+board 200 480  dekor
+board 240 480  dekor
+board 240 440  dekor
+board 240 520  dekor
+board 280 480  dekor
+board 240 400  dekor
+board 280 440  dekor
 board 320 480  dekor
 board 360 520  dekor
 board 360 480  dekor
 board 400 520  dekor
-board 240 400  dekor
-board 240 360  dekor
-board 280 360  dekor
+board 400 480  dekor
+board 440 520  dekor
 board 280 400  dekor
+board 280 360  dekor
+board 320 360  dekor
 board 320 400  dekor
-board 280 440  dekor
+board 360 400  dekor
 board 320 440  dekor
 board 360 440  dekor
-dirt 40 360  
-pos 960 560  
-pos 960 680  
-dirt 320 720  
-gun 360 680  3 2
-dirt 720 680  
+board 400 440  dekor
+dirt 80 360  
+pos 1000 560  
+pos 1000 680  
+dirt 360 720  
+gun 400 680  3 2
+dirt 760 680  
+dirt 800 560  
+dirt 680 480  
+bush 680 440  
 dirt 760 560  
-dirt 640 480  
-bush 640 440  
-dirt 720 560  
-dirt 600 680  
-dirt 640 720  
-board 400 480  dekor
-board 120 480  dekor
-cook 240 400  
-cook 280 360  
-cook 720 520  
+dirt 640 680  
+dirt 680 720  
+board 440 480  dekor
+board 160 480  dekor
+cook 280 400  
+cook 320 360  
 cook 760 520  
-cook 240 400  
-cook 320 440  
+cook 800 520  
+cook 280 400  
+cook 360 440  
+cook 360 480  
+cook 400 520  
 cook 320 480  
 cook 360 520  
-cook 280 480  
-cook 320 520  
-cook 280 480  
-cook 400 520  
-cook 400 480  
-cook 120 520  
-cook 120 480  
+cook 320 480  
+cook 440 520  
+cook 440 480  
+cook 160 520  
 cook 160 480  
-cook 200 520  
-dirt 440 -40 
-dirt 480 -40
+cook 200 480  
+cook 240 520  
+dirt 480 -40 
+dirt 520 -40

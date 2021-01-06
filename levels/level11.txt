@@ -1,4 +1,3 @@
-dirt 0 760
 dirt 40 760
 dirt 80 760
 dirt 120 760
@@ -23,24 +22,24 @@ dirt 840 760
 dirt 880 760
 dirt 920 760
 dirt 960 760
-dirt 0 0
-dirt 0 160
-dirt 0 200
-dirt 0 240
-dirt 0 280
-dirt 0 320
-dirt 0 360
-dirt 0 400
-dirt 0 440
-dirt 0 480
-dirt 0 520
-dirt 0 560
-dirt 0 600
-dirt 0 640
-dirt 0 680
-dirt 0 720
-dirt 0 760
-dirt 0 0
+dirt 1000 760
+dirt 40 0
+dirt 40 160
+dirt 40 200
+dirt 40 240
+dirt 40 280
+dirt 40 320
+dirt 40 360
+dirt 40 400
+dirt 40 440
+dirt 40 480
+dirt 40 520
+dirt 40 560
+dirt 40 600
+dirt 40 640
+dirt 40 680
+dirt 40 720
+dirt 40 760
 dirt 40 0
 dirt 80 0
 dirt 120 0
@@ -65,79 +64,78 @@ dirt 840 0
 dirt 880 0
 dirt 920 0
 dirt 960 0
-dirt 960 720
-dirt 960 680
-dirt 960 640
-dirt 960 600
-dirt 960 560
-dirt 960 520
-dirt 960 480
-dirt 960 440
-dirt 960 400
-dirt 960 360
-dirt 960 320
-dirt 960 280
-dirt 960 280
-dirt 960 240
-dirt 960 200
-dirt 960 160
-dirt 960 120
-dirt 960 80
-dirt 960 40
+dirt 1000 0
+dirt 1000 720
+dirt 1000 680
+dirt 1000 640
+dirt 1000 600
+dirt 1000 560
+dirt 1000 520
+dirt 1000 480
+dirt 1000 440
+dirt 1000 400
+dirt 1000 360
+dirt 1000 320
+dirt 1000 280
+dirt 1000 280
+dirt 1000 240
+dirt 1000 200
+dirt 1000 160
+dirt 1000 120
+dirt 1000 80
+dirt 1000 40
+dirt 960 120  
 dirt 920 120  
-dirt 880 120  
-gun 880 80 2 2
+gun 920 80 2 2
+dirt 960 280  
 dirt 920 280  
+gun 920 240  2 2
+dirt 80 680  
+dirt 80 720  
+dirt 160 560  
 dirt 880 280  
-gun 880 240  2 2
-dirt 40 680  
-dirt 40 720  
-dirt 120 560  
-dirt 840 280  
+dirt 840 320  
 dirt 800 320  
-dirt 760 320  
-dirt 800 280  
-dirt 40 280  
-dirt 240 440  
-dirt 120 360  
-dirt 120 160  
-stone_wall 0 120  withiut 0
-stone_wall 0 80  without 0
-stone_wall 0 80  without 0
-stone_wall 0 40  without 0
-Homa 360 160  
-dirt 360 160  
+dirt 840 280  
+dirt 80 280  
+dirt 280 440  
+dirt 160 360  
+dirt 160 160  
+stone_wall 40 120  withiut 0
+stone_wall 40 80  without 0
+stone_wall 40 80  without 0
+stone_wall 40 40  without 0
+Homa 400 160  
+dirt 400 160  
+spike 360 200  
 spike 320 200  
-spike 280 200  
-dirt 240 160  
-spike 160 200  
+dirt 280 160  
 spike 200 200  
-spike 200 200  
-dirt 680 720  
-dirt 680 680  
-dirt 720 560  
+spike 240 200  
+spike 240 200  
+dirt 720 720  
+dirt 720 680  
 dirt 760 560  
 dirt 800 560  
 dirt 840 560  
 dirt 880 560  
 dirt 920 560  
-bush 720 520  
-esh 760 400  
-cook 720 600  
+dirt 960 560  
+bush 760 520  
+esh 800 400  
 cook 760 600  
 cook 800 600  
-cook 800 600  
+cook 840 600  
 cook 840 600  
 cook 880 600  
 cook 920 600  
-cook 720 640  
+cook 960 600  
 cook 760 640  
 cook 800 640  
 cook 840 640  
 cook 880 640  
 cook 920 640  
-cook 720 680  
-cook 720 720  
+cook 960 640  
 cook 760 680  
 cook 760 720  
 cook 800 680  
@@ -148,10 +146,12 @@ cook 880 680
 cook 880 720  
 cook 920 680  
 cook 920 720  
-dirt 680 640  without 0
-dirt 680 600  without 0
-dirt 680 560  without 0
-dirt 560 640  
-squirrel 480 680  
-squirrel 160 640  
-esh 200 720  
+cook 960 680  
+cook 960 720  
+dirt 720 640  without 0
+dirt 720 600  without 0
+dirt 720 560  without 0
+dirt 600 640  
+squirrel 520 680  
+squirrel 200 640  
+esh 240 720  

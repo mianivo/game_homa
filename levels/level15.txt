@@ -1,5 +1,4 @@
-Homa 50 40  
-dirt 0 760
+Homa 90 40  
 dirt 40 760
 dirt 80 760
 dirt 120 760
@@ -24,24 +23,24 @@ dirt 840 760
 dirt 880 760
 dirt 920 760
 dirt 960 760
-dirt 0 0
-dirt 0 160
-dirt 0 200
-dirt 0 240
-dirt 0 280
-dirt 0 320
-dirt 0 360
-dirt 0 400
-dirt 0 440
-dirt 0 480
-dirt 0 520
-dirt 0 560
-dirt 0 600
-dirt 0 640
-dirt 0 680
-dirt 0 720
-dirt 0 760
-dirt 0 0
+dirt 1000 760
+dirt 40 0
+dirt 40 160
+dirt 40 200
+dirt 40 240
+dirt 40 280
+dirt 40 320
+dirt 40 360
+dirt 40 400
+dirt 40 440
+dirt 40 480
+dirt 40 520
+dirt 40 560
+dirt 40 600
+dirt 40 640
+dirt 40 680
+dirt 40 720
+dirt 40 760
 dirt 40 0
 dirt 80 0
 dirt 120 0
@@ -66,35 +65,35 @@ dirt 840 0
 dirt 880 0
 dirt 920 0
 dirt 960 0
-dirt 960 720
-dirt 960 680
-dirt 960 640
-dirt 960 600
-dirt 960 560
-dirt 960 520
-dirt 960 480
-dirt 960 440
-dirt 960 400
-dirt 960 360
-dirt 960 320
-dirt 960 280
-dirt 960 280
-dirt 960 240
-dirt 960 200
-dirt 960 160
-dirt 960 120
-dirt 960 80
-dirt 960 40
-squirrel 880 560  
+dirt 1000 0
+dirt 1000 720
+dirt 1000 680
+dirt 1000 640
+dirt 1000 600
+dirt 1000 560
+dirt 1000 520
+dirt 1000 480
+dirt 1000 440
+dirt 1000 400
+dirt 1000 360
+dirt 1000 320
+dirt 1000 280
+dirt 1000 280
+dirt 1000 240
+dirt 1000 200
+dirt 1000 160
+dirt 1000 120
+dirt 1000 80
+dirt 1000 40
+squirrel 920 560  
+squirrel 800 560  
 squirrel 760 560  
-squirrel 720 560  
-squirrel 640 560  
-squirrel 160 600  
-gun 880 80  3 3
-gun 80 80  3 1
-esh 640 520  
-esh 280 400  
-dirt 40 240  
+squirrel 680 560  
+squirrel 200 600  
+gun 920 80  3 3
+gun 120 80  3 1
+esh 680 520  
+esh 320 400  
 dirt 80 240  
 dirt 120 240  
 dirt 160 240  
@@ -106,21 +105,23 @@ dirt 360 240
 dirt 400 240  
 dirt 440 240  
 dirt 480 240  
-esh 80 160  
-esh 280 120  
-dirt 480 120  sleep 1
-dirt 480 80  sleep 1
-dirt 480 40  sleep 1
-dirt 600 120  
-dirt 640 120  
-gun 600 80  0.2 2
 dirt 520 240  
+esh 120 160  
+esh 320 120  
+dirt 520 120  sleep 1
+dirt 520 80  sleep 1
+dirt 520 40  sleep 1
+dirt 640 120  
+dirt 680 120  
+gun 640 80  0.2 2
 dirt 560 240  
 dirt 600 240  
 dirt 640 240  
 dirt 680 240  
-bush 320 80  
-dirt 320 120  dekor
+dirt 720 240  
+bush 360 80  
+dirt 360 120  dekor
+board 960 480  
 board 920 480  
 board 880 480  
 board 840 480  
@@ -138,49 +139,48 @@ board 400 480
 board 360 480  
 board 320 480  
 board 280 480  
-board 240 480  
-board 200 480    
-esh 240 400  
-esh 480 360  
-esh 720 360  
-esh 240 320  
-squirrel 880 360  
-squirrel 240 360  
-squirrel 560 320  
-dirt 40 400  
-dirt 80 400  
-gun 80 320  6 0
-gold 0 40  without 0
-gold 0 80  without 0
-gold 0 120  without 0
-dirt 920 320  
-dirt 880 320  
-dirt 760 440  
-dirt 920 200  
-dirt 800 120  
-dirt 120 520  
-dirt 40 640  
-dirt 760 400  
-esh 480 600  
-esh 240 600  
-esh 640 600  
-esh 360 560  
-esh 600 560  
-esh 200 600  
-squirrel 440 560  
-squirrel 840 520  
-squirrel 320 360  
-squirrel 480 320  
-squirrel 280 320  
-squirrel 320 400  
-squirrel 160 400  
+board 240 480    
+esh 280 400  
 esh 520 360  
-esh 240 320  
-esh 400 400  
-esh 120 560  
-esh 320 600  
-esh 80 40  
+esh 760 360  
+esh 280 320  
+squirrel 920 360  
+squirrel 280 360  
+squirrel 600 320  
+dirt 80 400  
+dirt 120 400  
+gun 120 320  6 0
+gold 40 40  without 0
+gold 40 80  without 0
+gold 40 120  without 0
+dirt 960 320  
+dirt 920 320  
+dirt 800 440  
+dirt 960 200  
+dirt 840 120  
+dirt 160 520  
+dirt 80 640  
+dirt 800 400  
+esh 520 600  
+esh 280 600  
+esh 680 600  
+esh 400 560  
+esh 640 560  
+esh 240 600  
+squirrel 480 560  
+squirrel 880 520  
+squirrel 360 360  
+squirrel 520 320  
+squirrel 320 320  
+squirrel 360 400  
+squirrel 200 400  
+esh 560 360  
+esh 280 320  
+esh 440 400  
+esh 160 560  
+esh 360 600  
+esh 120 40  
+dirt 960 600  
 dirt 920 600  
-dirt 880 600  
-gun 880 520  3 2
-dirt 160 640  
+gun 920 520  3 2
+dirt 200 640  

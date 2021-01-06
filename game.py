@@ -148,18 +148,19 @@ try:
     game.run_game()
 except pygame.error:  # При ошибке выводит сообщение
     import Check_other_files
-except Exception as e:
-    import logging
-    import tkinter as tk
+#except Exception as e:
+    if False:
+        import logging
+        import tkinter as tk
 
-    window = tk.Tk('400x250')
-    window.title('Непредвиденная ошибка.')
-    lbl = tk.Label(window,
-                   text='Произошла непредвиденная ошибка. Обратитесь к разработчику игры.\n Сообщение об ошибке записано в файл log.txt')
-    lbl.grid(column=0, row=0)
-    lbl2 = tk.Label(window, text=e)
-    lbl2.grid(column=0, row=1)
-    window.mainloop()
-    logging.basicConfig(filename="log.txt", level=logging.INFO)
-    logging.error(str(e))
-    input()
+        window = tk.Tk('400x250')
+        window.title('Непредвиденная ошибка.')
+        lbl = tk.Label(window,
+                       text='Произошла непредвиденная ошибка. Обратитесь к разработчику игры.\n Сообщение об ошибке записано в файл log.txt')
+        lbl.grid(column=0, row=0)
+        lbl2 = tk.Label(window, text=e)
+        lbl2.grid(column=0, row=1)
+        window.mainloop()
+        logging.basicConfig(filename="log.txt", level=logging.INFO)
+        logging.error(str(e))
+        input()

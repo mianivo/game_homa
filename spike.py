@@ -2,8 +2,8 @@ from blocks import Blocks
 
 
 class Spikes(Blocks):
-    def __init__(self, x, y):
-        Blocks.__init__(self, x, y, where_image='images\Blocks\spike.png')
+    def __init__(self, x, y, group):
+        Blocks.__init__(self, x, y, where_image='images\Blocks\spike.png', group=group)
         self.type = 'spike'
 
     def unique_properties(self, hero):

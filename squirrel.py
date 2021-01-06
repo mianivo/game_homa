@@ -8,9 +8,9 @@ class Squirrel(Enemy):
                                   'images\enemys\squirrel\left2.png'],
                  image_list_right=['images\enemys\squirrel\\right0.png', 'images\enemys\squirrel\\right1.png',
                                    'images\enemys\squirrel\\right2.png'],
-                 speed=5, hp=1400, name='Белка', how_much_go_right=40, how_much_go_left=40, damage=70, main_hero=None, is_go_right=True):
+                 speed=5, hp=1400, name='Белка', how_much_go_right=40, how_much_go_left=40, damage=70, main_hero=None, is_go_right=True, group=None):
         Enemy.__init__(self, x=x, y=y, image_list_left=image_list_left,
-                       image_list_right=image_list_right,how_much_go_right=how_much_go_right, how_much_go_left=how_much_go_left, speed=speed, hp=hp, name=name, damage=damage)
+                       image_list_right=image_list_right,how_much_go_right=how_much_go_right, how_much_go_left=how_much_go_left, speed=speed, hp=hp, name=name, damage=damage, group=group)
         self.is_go_right = is_go_right
         self.near_person = False
         self.rast = 0

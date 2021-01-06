@@ -1,4 +1,3 @@
-dirt 0 760
 dirt 40 760
 dirt 80 760
 dirt 120 760
@@ -23,24 +22,24 @@ dirt 840 760
 dirt 880 760
 dirt 920 760
 dirt 960 760
-dirt 0 0
-dirt 0 160
-dirt 0 200
-dirt 0 240
-dirt 0 280
-dirt 0 320
-dirt 0 360
-dirt 0 400
-dirt 0 440
-dirt 0 480
-dirt 0 520
-dirt 0 560
-dirt 0 600
-dirt 0 640
-dirt 0 680
-dirt 0 720
-dirt 0 760
-dirt 0 0
+dirt 1000 760
+dirt 40 0
+dirt 40 160
+dirt 40 200
+dirt 40 240
+dirt 40 280
+dirt 40 320
+dirt 40 360
+dirt 40 400
+dirt 40 440
+dirt 40 480
+dirt 40 520
+dirt 40 560
+dirt 40 600
+dirt 40 640
+dirt 40 680
+dirt 40 720
+dirt 40 760
 dirt 40 0
 dirt 80 0
 dirt 120 0
@@ -65,98 +64,99 @@ dirt 840 0
 dirt 880 0
 dirt 920 0
 dirt 960 0
-dirt 960 720
-dirt 960 680
-dirt 960 640
-dirt 960 600
-dirt 960 560
-dirt 960 520
-dirt 960 480
-dirt 960 440
-dirt 960 400
-dirt 960 360
-dirt 960 320
-dirt 960 280
-dirt 960 280
-dirt 960 240
-dirt 960 200
-dirt 960 160
-dirt 960 120
-dirt 960 80
-dirt 960 40
-1 1 1
-dirt 0 120  without 1
-dirt 0 80  without 0
-dirt 0 40  without 0
-esh 560 480  
+dirt 1000 0
+dirt 1000 720
+dirt 1000 680
+dirt 1000 640
+dirt 1000 600
+dirt 1000 560
+dirt 1000 520
+dirt 1000 480
+dirt 1000 440
+dirt 1000 400
+dirt 1000 360
+dirt 1000 320
+dirt 1000 280
+dirt 1000 280
+dirt 1000 240
+dirt 1000 200
+dirt 1000 160
+dirt 1000 120
+dirt 1000 80
+dirt 1000 40
+1 41 1
 dirt 40 120  without 1
+dirt 40 80  without 0
+dirt 40 40  without 0
+esh 600 480  
 dirt 80 120  without 1
 dirt 120 120  without 1
 dirt 160 120  without 1
 dirt 200 120  without 1
-Homa 920 40  
+dirt 240 120  without 1
+Homa 960 40  
+dirt 960 160  
 dirt 920 160  
 dirt 880 160  
-dirt 840 160  
-esh 160 600  
-esh 440 560  
-dirt 720 80  
-bush 280 720  
-bush 680 720  
-dirt 40 640  
-dirt 920 640  
-esh 760 520  
+esh 200 600  
+esh 480 560  
+dirt 760 80  
+bush 320 720  
+bush 720 720  
+dirt 80 640  
+dirt 960 640  
+esh 800 520  
+dirt 840 320  
 dirt 800 320  
 dirt 760 320  
-dirt 720 320  
-dirt 800 560  
-dirt 40 520  
+dirt 840 560  
 dirt 80 520  
 dirt 120 520  
 dirt 160 520  
 dirt 200 520  
-dirt 280 520  
 dirt 240 520  
-dirt 40 280  
+dirt 320 520  
+dirt 280 520  
 dirt 80 280  
 dirt 120 280  
 dirt 160 280  
 dirt 200 280  
 dirt 240 280  
 dirt 280 280  
-dirt 600 320  sleep 1
-esh 120 360  
-dirt 680 560  sleep 0
-dirt 560 560  
-dirt 400 560  sleep 1
-stone_wall 320 520  without 1
-stone_wall 320 480  without 1
-stone_wall 320 400  without 1
-stone_wall 320 360  without 1
-stone_wall 320 320  without 1
-dirt 880 440  
-dirt 480 320  
-dirt 360 320  sleep 1
-cook 40 80  
+dirt 320 280  
+dirt 640 320  sleep 1
+esh 160 360  
+dirt 720 560  sleep 0
+dirt 600 560  
+dirt 440 560  sleep 1
+stone_wall 360 520  without 1
+stone_wall 360 480  without 1
+stone_wall 360 400  without 1
+stone_wall 360 360  without 1
+stone_wall 360 320  without 1
+dirt 920 440  
+dirt 520 320  
+dirt 400 320  sleep 1
 cook 80 80  
 cook 120 80  
 cook 160 80  
 cook 200 80  
 cook 240 80  
 cook 280 80  
-cook 40 240  
+cook 320 80  
 cook 80 240  
-cook 40 200  
+cook 120 240  
 cook 80 200  
 cook 120 200  
-cook 120 240  
-cook 320 80  
-stone_wall 160 240  without 1
-stone_wall 160 200  without 1
-dirt 400 200  
+cook 160 200  
+cook 160 240  
+cook 360 80  
+stone_wall 200 240  without 1
+stone_wall 200 200  without 1
 dirt 440 200  
 dirt 480 200  
-stone_wall 320 440  without 1
-stone_wall 160 160  without 1
-dirt 280 120  without 1
-bush 280 480  
+dirt 520 200  
+stone_wall 360 440  without 1
+stone_wall 200 160  without 1
+dirt 320 120  without 1
+bush 320 480  

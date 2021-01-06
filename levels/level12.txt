@@ -1,4 +1,3 @@
-dirt 0 760
 dirt 40 760
 dirt 80 760
 dirt 120 760
@@ -23,24 +22,24 @@ dirt 840 760
 dirt 880 760
 dirt 920 760
 dirt 960 760
-dirt 0 0
-dirt 0 160
-dirt 0 200
-dirt 0 240
-dirt 0 280
-dirt 0 320
-dirt 0 360
-dirt 0 400
-dirt 0 440
-dirt 0 480
-dirt 0 520
-dirt 0 560
-dirt 0 600
-dirt 0 640
-dirt 0 680
-dirt 0 720
-dirt 0 760
-dirt 0 0
+dirt 1000 760
+dirt 40 0
+dirt 40 160
+dirt 40 200
+dirt 40 240
+dirt 40 280
+dirt 40 320
+dirt 40 360
+dirt 40 400
+dirt 40 440
+dirt 40 480
+dirt 40 520
+dirt 40 560
+dirt 40 600
+dirt 40 640
+dirt 40 680
+dirt 40 720
+dirt 40 760
 dirt 40 0
 dirt 80 0
 dirt 120 0
@@ -65,67 +64,68 @@ dirt 840 0
 dirt 880 0
 dirt 920 0
 dirt 960 0
-dirt 960 720
-dirt 960 680
-dirt 960 640
-dirt 960 600
-dirt 960 560
-dirt 960 520
-dirt 960 480
-dirt 960 440
-dirt 960 400
-dirt 960 360
-dirt 960 320
-dirt 960 280
-dirt 960 280
-dirt 960 240
-dirt 960 200
-dirt 960 160
-dirt 960 120
-dirt 960 80
-dirt 960 40
-dirt 0 120  wihout 0
-dirt 0 80  without 0
-dirt 0 80  without 0
-dirt 0 40  without 0
-stone_wall 840 760  
+dirt 1000 0
+dirt 1000 720
+dirt 1000 680
+dirt 1000 640
+dirt 1000 600
+dirt 1000 560
+dirt 1000 520
+dirt 1000 480
+dirt 1000 440
+dirt 1000 400
+dirt 1000 360
+dirt 1000 320
+dirt 1000 280
+dirt 1000 280
+dirt 1000 240
+dirt 1000 200
+dirt 1000 160
+dirt 1000 120
+dirt 1000 80
+dirt 1000 40
+dirt 40 120  wihout 0
+dirt 40 80  without 0
+dirt 40 80  without 0
+dirt 40 40  without 0
 stone_wall 880 760  
 stone_wall 920 760  
-dirt 40 160  
+stone_wall 960 760  
 dirt 80 160  
-Homa 80 80  
-dirt 200 160  
-dirt 320 160  
-dirt 440 160  
-dirt 560 160  
-dirt 680 160  
-dirt 800 160  
-dirt 920 240  
-dirt 840 360  
-spike 120 200  
-spike 240 200  
-spike 360 200  
-spike 480 200  
-spike 600 200  
-spike 720 200  
-spike 880 360  
-dirt 40 320  
+dirt 120 160  
+Homa 120 80  
+dirt 240 160  
+dirt 360 160  
+dirt 480 160  
+dirt 600 160  
+dirt 720 160  
+dirt 840 160  
+dirt 960 240  
+dirt 880 360  
+spike 160 200  
+spike 280 200  
+spike 400 200  
+spike 520 200  
+spike 640 200  
+spike 760 200  
+spike 920 360  
 dirt 80 320  
-gun 80 280  2 0
-dirt 720 440  
-dirt 560 440  
-dirt 400 440  
-bush 440 280  
-dirt 440 320  dekor
-dirt 440 360  dekor
-dirt 440 400  dekor
-dirt 240 440  
-dirt 120 560  
-spike 120 720  
-spike 320 520  
-spike 480 520  
-spike 640 520  
-spike 800 440  
-dirt 40 680  without 1
-dirt 720 720  
-esh 760 640  
+dirt 120 320  
+gun 120 280  2 0
+dirt 760 440  
+dirt 600 440  
+dirt 440 440  
+bush 480 280  
+dirt 480 320  dekor
+dirt 480 360  dekor
+dirt 480 400  dekor
+dirt 280 440  
+dirt 160 560  
+spike 160 720  
+spike 360 520  
+spike 520 520  
+spike 680 520  
+spike 840 440  
+dirt 80 680  without 1
+dirt 760 720  
+esh 800 640  
