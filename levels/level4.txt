@@ -84,7 +84,6 @@ dirt 1000 160
 dirt 1000 120
 dirt 1000 80
 dirt 1000 40
-1 41 1
 dirt 40 120  without 1
 dirt 40 80  without 0
 dirt 40 40  without 0

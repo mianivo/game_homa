@@ -5,3 +5,6 @@ ERROR:root:add() argument after * must be an iterable, not NoneType
 ERROR:root:add() argument after * must be an iterable, not NoneType
 ERROR:root:add() argument after * must be an iterable, not NoneType
 ERROR:root:add() argument after * must be an iterable, not NoneType
+ERROR:root:'Magic' object has no attribute 'image'
+ERROR:root:'Magic' object has no attribute 'image'
+ERROR:root:

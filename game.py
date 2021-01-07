@@ -6,6 +6,7 @@ try:
     import pygame
 
     pygame.init()
+
     import menu  # Меню
     import HOMA  # главный герой
     import levels
@@ -146,7 +147,8 @@ try:
     # Если что-то не так, перезаписывает файл, приводя к начальным параметрам
     game = Game()  # сама игра
     game.run_game()
-except pygame.error:  # При ошибке выводит сообщение
+except pygame.error as e:  # При ошибке выводит сообщение
+    print(e)
     import Check_other_files
 #except Exception as e:
     if False:

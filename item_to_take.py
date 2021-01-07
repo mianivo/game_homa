@@ -67,3 +67,4 @@ class Watermelon(Items):
             hero.change_xp(2000)
             hero.change_cook_count(2000)
             return True
+

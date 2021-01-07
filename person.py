@@ -35,7 +35,6 @@ class Person(sprite.Sprite):
 
         self.cook_count = 0
         self.get_damage = False
-
         super().__init__(group)
 
 

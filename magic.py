@@ -3,14 +3,16 @@ from script_dir import script_dir
 
 
 # Класс не наследуется, т.к. имеет слишком много особенностей
-class Magic:
+class Magic(pygame.sprite.Sprite):
     '''Магия для атаки.'''
     def __init__(self, x, y, is_right, damage, main_hero, image_magic_list=['images\magic\magic_1.png',
                                                                             'images\magic\magic_2.png',
                                                                             'images\magic\magic_3.png',
                                                                             'images\magic\magic_4.png'],
-                 dekor_image='images\magic\magic_dekor_1.png'):
+                 dekor_image='images\magic\magic_dekor_1.png', group=None):
         self.image_magic_list = [pygame.image.load(script_dir + im) for im in image_magic_list]
+        self.image = self.image_magic_list[0]
+
         self.x_cor = x
         self.y_cor = y
         self.rect = self.image_magic_list[0].get_rect()
@@ -27,18 +29,22 @@ class Magic:
         self.damage = damage
         self.type = 'magic'
 
-    def move(self):
+        super().__init__(group)
+
+    def update(self):
+        if self.end:
+            self.remove(self.groups())
         if self.move_count < 32:
             self.move_count += 2
         x = self.move_count
         if self.move_count % 4 == 0:
-            self.where_dekor_list.append([*self.rect.topright, 4])
+            self.where_dekor_list.append([*self.rect.topleft, 4])
         x = x if self.is_right else -x
         self.change_animation()
         self.rect = self.rect.move(x, 0)
+        self.image = self.image_magic_list[self.anim_count]
 
-    def draw(self, window):
-        window.blit(self.image_magic_list[self.anim_count], self.rect.topright)
+    def draw_additional(self, window):
         for n, dekor in enumerate(self.where_dekor_list):
             window.blit(self.image_dekor, (dekor[0] - 5, dekor[1] - 5))
             dekor[2] -= 1

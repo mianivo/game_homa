@@ -20,11 +20,13 @@ class Boss(Enemy):
         self.xp_for_main_hero = 400
         self.hp_color = (50, 255, 50)
 
-    def draw(self, window):
-        window.blit(self.image_now, (self.rect.topleft))
+    def draw_additional(self, window):
         if self.main_boss:
             pygame.draw.rect(window, self.hp_color,
                              (60, 765, self.hp // 11, 20))
+    def update(self, *args, **kwargs) -> None:
+        if self.is_dead:
+            self.remove(self.groups())
 
     def do_enemys(self):
         return 'do_e'
@@ -56,7 +58,7 @@ class Boss2(Squirrel, Boss):
     '''Финальный босс.'''
 
     def __init__(self, x, y, group):
-        Boss.__init__(self, x, y, group)
+        Boss.__init__(self, x, y, group=group)
         Squirrel.__init__(self, x, y, image_list_left=['images\\final_boss\\final_boss_left_1.png',
                                                        'images\\final_boss\\final_boss_left_2.png',
                                                        'images\\final_boss\\final_boss_left_3.png'],
@@ -89,8 +91,7 @@ class Boss2(Squirrel, Boss):
         if time.time() - self.fase_time > 3:
             self.hp_color = (100, 255, 100)
 
-    def draw(self, window):
-        window.blit(self.image_now, (self.rect.topright))
+    def draw_additional(self, window):
         if self.main_boss:
             pygame.draw.rect(window, self.hp_color,
                              (60, 765, self.hp // 33, 20))
@@ -108,11 +109,11 @@ class Boss2(Squirrel, Boss):
                                                'images\magic\\boss_magic_2.png',
                                                'images\magic\\boss_magic_3.png',
                                                'images\magic\\boss_magic_4.png'],
-                             dekor_image='images\magic\\boss_magic_dekor.png')
+                             dekor_image='images\magic\\boss_magic_dekor.png', group=self.groups())
             else:
                 return Magic(*self.rect.topleft, False, self.damage * 2, self,
                              image_magic_list=['images\magic\\boss_magic_1.png',
                                                'images\magic\\boss_magic_2.png',
                                                'images\magic\\boss_magic_3.png',
                                                'images\magic\\boss_magic_4.png'],
-                             dekor_image='images\magic\\boss_magic_dekor.png')
+                             dekor_image='images\magic\\boss_magic_dekor.png', group=self.groups())

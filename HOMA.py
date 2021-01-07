@@ -156,6 +156,6 @@ class Homa(Person):  # Главного героя - хомяка зовут Х�
                     self.change_cook_count(-2)
                     self.set_magic_time()
                     if self.is_go_right:
-                        return Magic(*self.rect.topright, True, self.damage * 2, self)
+                        return Magic(*self.rect.topright, True, self.damage * 2, self, group=self.groups())
                     else:
-                        return Magic(*self.rect.topleft, False, self.damage * 2, self)
+                        return Magic(*self.rect.topleft, False, self.damage * 2, self, group=self.groups())

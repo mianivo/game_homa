@@ -62,7 +62,7 @@ class Enemy(Person):  # Главного героя - хомяка зовут Х
             if random.randrange(0, 12) > 8 or self.cook_count:
                 self.do_heart = True
 
-    def draw(self, window):
+    def draw_additional(self, window):
         if self.get_damage:
             pygame.draw.rect(window, (255, 0, 0),
                              (self.rect.topleft[0] + 10, self.rect.topleft[1] - 20, self.hp // 20, 2))

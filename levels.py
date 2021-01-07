@@ -129,7 +129,8 @@ class Level:
                 self.blocks_on_level_list.append(
                     Blocks(int(x_cor), int(y_cor), sleep_block=sleep, sleep_now=sleep_now, without=without,
                            without_now=without_now, is_dekor=is_dekor,
-                           where_image='images\Blocks\\final_boss_wall.png'), group=[self.blocks_group, self.all_sprites_group])
+                           where_image='images\Blocks\\final_boss_wall.png',
+                           group=[self.blocks_group, self.all_sprites_group]))
             elif 'shell' == object:
                 self.shell_list.append(Shell(int(x_cor), int(y_cor),
                                              is_right=is_right, is_up=is_up, group=[self.shell_group, self.all_sprites_group]))
@@ -158,34 +159,21 @@ class Level:
 
     def draw(self, window):
         '''Рисование объектов уровня(всё кроме кнопки выхода с уровня и фона)'''
-        self.blocks_group.draw(window)
         self.persons_group.draw(window)
         self.shell_group.draw(window)
         self.boss_group.draw(window)
         self.item_to_take_group.draw(window)
         self.magic_group.draw(window)
         self.all_sprites_group.update()
+        self.blocks_group.draw(window)
 
+        for sprite in self.all_sprites_group:
+            try:
+                sprite.draw_additional(window)
+            except AttributeError:
+                pass
         self.main_hero.draw_info(window)
-        for person in self.person_list:
-            if not person.is_dead:
-                person.draw(window)
 
-        if False:
-            for item in self.item_list:
-                item.draw(window)
-            self.main_hero.draw(window)
-            for block in self.blocks_on_level_list:
-                block.draw(window)
-            for person in self.person_list:
-                if person.is_dead == False:
-                    person.draw(window)
-            for magic in self.magic_list + self.shell_list:
-                magic.draw(window)
-                magic.move()
-            self.main_hero.draw_info(window)
-            if self.boss:
-                self.boss.draw(window)
         if self.image_text:
             window.blit(self.image_text, (600, 10))
 
@@ -246,7 +234,7 @@ class Level:
                 self.__init__(level_number='202', complexity=self.complexiry)
                 self.image_text = pygame.font.SysFont('arial', 36).render('Финальный босс!', 1, (0, 255, 0))
                 pygame.mixer.music.load(script_dir + 'music\Terraria_Music_2.mp3')
-                self.boss = Boss2(500, 500, group=self.boss_group)
+                self.boss = Boss2(500, 500, group=[self.all_sprites_group, self.boss_group])
                 self.boss.main_hero = self.main_hero
                 pygame.mixer.music.play(-1)
             elif self.level_number == '20':
@@ -310,10 +298,10 @@ class Level:
                     self.person_list.append(gun)
             if self.boss.type == 'f':
                 boss_magic = self.boss.do_magic()
-                self.all_sprites_group.add(boss_magic)
-                self.magic_group.add(boss_magic)
                 if boss_magic:
                     self.shell_list.append(boss_magic)
+                    self.all_sprites_group.add(boss_magic)
+                    self.magic_group.add(boss_magic)
 
             self.boss.fall()
 
@@ -323,13 +311,13 @@ class Level:
                 if magic.rect.colliderect(block.rect) and block.sleep_now == False and (
                         block.type == 'bush' or (block.type != 'spike' and block)):
                     magic.end = True
-                if magic.end == True:
+                if magic.end:
                     self.magic_list.pop(n)
             for n, magic in enumerate(self.shell_list):
                 if magic.rect.colliderect(block.rect) and block.sleep_now == False and (
                         block.type == 'bush' or (block.type != 'spike' and block)):
                     magic.end = True
-                if magic.end == True:
+                if magic.end:
                     self.shell_list.pop(n)
 
     def check_items(self, hero):
