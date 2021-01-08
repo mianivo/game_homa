@@ -5,24 +5,35 @@ from script_dir import script_dir
 # Класс не наследуется, т.к. имеет слишком много особенностей
 class Magic(pygame.sprite.Sprite):
     '''Магия для атаки.'''
-    def __init__(self, x, y, is_right, damage, main_hero, image_magic_list=['images\magic\magic_1.png',
-                                                                            'images\magic\magic_2.png',
-                                                                            'images\magic\magic_3.png',
-                                                                            'images\magic\magic_4.png'],
-                 dekor_image='images\magic\magic_dekor_1.png', group=None):
-        self.image_magic_list = [pygame.image.load(script_dir + im) for im in image_magic_list]
-        self.image = self.image_magic_list[0]
+    image_magic_list = [pygame.image.load(script_dir + im) for im in ['images\magic\magic_1.png',
+                        'images\magic\magic_2.png',
+                        'images\magic\magic_3.png',
+                        'images\magic\magic_4.png']]
+
+    dekor_image = pygame.image.load(script_dir + 'images\magic\magic_dekor_1.png')
+
+    boss_image_magic_list = []
+    boss_dekor_image = []
+
+    def __init__(self, x, y, is_right, damage, main_hero, is_boss_magic=False, group=None):
+        if not is_boss_magic:
+            self.image = self.image_magic_list[0]
+        else:
+            self.image = self.boss_image_magic_list[0]
 
         self.x_cor = x
         self.y_cor = y
-        self.rect = self.image_magic_list[0].get_rect()
+        self.rect = self.image.get_rect()
         self.is_right = is_right
         self.move_count = 0
         self.anim_count = 0
         self.anim_count_max = 3
         width, height = self.rect.bottomright
         self.rect = pygame.Rect((x - width, y), (width, height))
-        self.image_dekor = pygame.image.load(script_dir + dekor_image)
+        if not is_boss_magic:
+            self.image_dekor = self.dekor_image
+        else:
+            self.image_dekor = self.boss_dekor_image
         self.main_hero = main_hero
         self.where_dekor_list = []
         self.end = False

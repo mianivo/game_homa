@@ -28,14 +28,6 @@ class Level:
         self.level_number = level_number
         file_name = 'levels\level' + str(level_number) + '.txt'
         self.image_text = None  # текст для отображения на уровне
-        if self.level_number == '19':
-            self.image_text = pygame.font.SysFont('arial', 36).render('Головоломка.', 1, (0, 255, 0))
-        elif self.level_number == '6':
-            self.image_text = pygame.font.SysFont('arial', 36).render('Используй лечение.', 1, (0, 255, 0))
-        elif self.level_number == '21':
-            self.image_text = pygame.font.SysFont('arial', 36).render('На 22 хуже', 1, (255, 0, 0))
-        elif self.level_number == '22':
-            self.image_text = pygame.font.SysFont('arial', 36).render('Это реально пройти', 1, (255, 0, 0))
         self.level_size = (1000, 800)
         self.main_hero = None
         self.boss = None  # босс
@@ -46,7 +38,8 @@ class Level:
         self.shell_list = []  # Снаряды и магия финального босса
 
         if self.main_hero == None:
-            self.main_hero = Homa(340, 300, complexity=self.complexiry, group=[self.persons_group, self.all_sprites_group])
+            self.main_hero = Homa(340, 300, complexity=self.complexiry,
+                                  group=[self.persons_group, self.all_sprites_group])
             for person in self.person_list:
                 try:
                     person.set_hero(self.main_hero)
@@ -56,7 +49,7 @@ class Level:
         self.all_sprites_group.update()  # Необходимо для корректного начала уровня(иначе блоки вначеле "моргают")
 
     def load_level(self, file_name):
-        with open(script_dir + file_name) as file_object:
+        with open(script_dir + file_name, encoding='utf8') as file_object:
             self.level_file = file_object.read()
         for string in self.level_file.split('\n'):
             object, x_cor, y_cor, *dop = string.split()
@@ -98,7 +91,8 @@ class Level:
             if 'dirt' == object:
                 self.blocks_on_level_list.append(
                     Blocks(int(x_cor), int(y_cor), sleep_block=sleep, sleep_now=sleep_now, without=without,
-                           without_now=without_now, is_dekor=is_dekor, group=[self.blocks_group, self.all_sprites_group]))
+                           without_now=without_now, is_dekor=is_dekor,
+                           group=[self.blocks_group, self.all_sprites_group]))
             elif 'stone_wall' == object:
                 self.blocks_on_level_list.append(
                     Blocks(int(x_cor), int(y_cor), where_image='images\Blocks\stone_wall.png', sleep_block=sleep,
@@ -112,19 +106,24 @@ class Level:
             elif 'bush' == object:
                 self.blocks_on_level_list.append(
                     Dekor(x=int(x_cor), y=int(y_cor), where_image='images\dekor\Bush.png', sleep_block=sleep,
-                          sleep_now=sleep_now, without=without, without_now=without_now, is_dekor=is_dekor, group=[self.blocks_group, self.all_sprites_group]))
+                          sleep_now=sleep_now, without=without, without_now=without_now, is_dekor=is_dekor,
+                          group=[self.blocks_group, self.all_sprites_group]))
             elif 'gold' == object:
                 self.blocks_on_level_list.append(
                     Blocks(int(x_cor), int(y_cor), where_image='images\Blocks\gold.png', sleep_block=sleep,
-                           sleep_now=sleep_now, without=without, without_now=without_now, is_dekor=is_dekor, group=[self.blocks_group, self.all_sprites_group]))
+                           sleep_now=sleep_now, without=without, without_now=without_now, is_dekor=is_dekor,
+                           group=[self.blocks_group, self.all_sprites_group]))
             elif 'rainbow_block' == object:
                 self.blocks_on_level_list.append(
                     Rainbow_blocks(int(x_cor), int(y_cor), sleep_block=sleep, sleep_now=sleep_now, without=without,
-                                   without_now=without_now, is_dekor=is_dekor, group=[self.blocks_group, self.all_sprites_group]))
+                                   without_now=without_now, is_dekor=is_dekor,
+                                   group=[self.blocks_group, self.all_sprites_group]))
             elif 'cook' == object:
-                self.item_list.append(Cookies(int(x_cor), int(y_cor), group=[self.item_to_take_group, self.all_sprites_group]))
+                self.item_list.append(
+                    Cookies(int(x_cor), int(y_cor), group=[self.item_to_take_group, self.all_sprites_group]))
             elif 'mega_cook' == object:
-                self.item_list.append(Cookies(int(x_cor), int(y_cor), mega_cook=True, group=[self.item_to_take_group, self.all_sprites_group]))
+                self.item_list.append(Cookies(int(x_cor), int(y_cor), mega_cook=True,
+                                              group=[self.item_to_take_group, self.all_sprites_group]))
             elif 'final_boss_wall' == object:
                 self.blocks_on_level_list.append(
                     Blocks(int(x_cor), int(y_cor), sleep_block=sleep, sleep_now=sleep_now, without=without,
@@ -133,29 +132,37 @@ class Level:
                            group=[self.blocks_group, self.all_sprites_group]))
             elif 'shell' == object:
                 self.shell_list.append(Shell(int(x_cor), int(y_cor),
-                                             is_right=is_right, is_up=is_up, group=[self.shell_group, self.all_sprites_group]))
+                                             is_right=is_right, is_up=is_up,
+                                             group=[self.shell_group, self.all_sprites_group]))
             elif 'gun' == object:
                 self.person_list.append(Gun(int(x_cor), int(y_cor), speed_atack=speed_atack,
                                             position=position, group=[self.persons_group, self.all_sprites_group]))
             elif 'esh' == object:
                 self.person_list.append(Enemy(x=int(x_cor), y=int(y_cor), how_much_go_right=int(dop[0]) if dop else 30,
                                               how_much_go_left=int(dop[0]) if dop else 30,
-                                              hp=800 if self.level_number != '19' else 1, group=[self.persons_group, self.all_sprites_group]))
+                                              hp=800 if self.level_number != '19' else 1,
+                                              group=[self.persons_group, self.all_sprites_group]))
             elif 'spike' == object:
-                self.blocks_on_level_list.append(Spikes(x=int(x_cor), y=int(y_cor), group=[self.blocks_group, self.all_sprites_group]))
+                self.blocks_on_level_list.append(
+                    Spikes(x=int(x_cor), y=int(y_cor), group=[self.blocks_group, self.all_sprites_group]))
             elif 'squirrel' == object:
                 self.person_list.append(Squirrel(x=int(x_cor), y=int(y_cor), main_hero=self.main_hero,
                                                  how_much_go_right=how_much_go if how_much_go else 40,
                                                  how_much_go_left=how_much_go if how_much_go else 40,
-                                                 is_go_right=is_go_right, group=[self.persons_group, self.all_sprites_group]))
+                                                 is_go_right=is_go_right,
+                                                 group=[self.persons_group, self.all_sprites_group]))
             elif 'Homa' == object:
                 if self.main_hero:
                     self.persons_group.remove(self.main_hero)
-                self.main_hero = Homa(int(x_cor), int(y_cor), complexity=self.complexiry, group=[self.persons_group, self.all_sprites_group])
+                self.main_hero = Homa(int(x_cor), int(y_cor), complexity=self.complexiry,
+                                      group=[self.persons_group, self.all_sprites_group])
             elif 'boss_1' == object:
                 self.boss = Boss(x=int(x_cor), y=int(y_cor), group=[self.persons_group, self.all_sprites_group])
             elif 'person_boss_1' == object:
-                self.person_list.append(Boss(x=int(x_cor), y=int(y_cor), group=[self.persons_group, self.all_sprites_group]))
+                self.person_list.append(
+                    Boss(x=int(x_cor), y=int(y_cor), group=[self.persons_group, self.all_sprites_group]))
+            elif 'text' == object:
+                self.image_text = pygame.font.SysFont('arial', 22).render(dop[0].replace('_', ' '), 1, (0, 255, 0))
 
     def draw(self, window):
         '''Рисование объектов уровня(всё кроме кнопки выхода с уровня и фона)'''
@@ -175,7 +182,7 @@ class Level:
         self.main_hero.draw_info(window)
 
         if self.image_text:
-            window.blit(self.image_text, (600, 10))
+            window.blit(self.image_text, (500, 30))
 
     def control_main_hero(self, keys):
         for key in keys:
@@ -202,46 +209,8 @@ class Level:
         if not self.boss and (self.main_hero.rect.topright[0] > self.level_size[0] or \
                               self.main_hero.rect.topright[1] > self.level_size[1] or \
                               self.main_hero.rect.topright[0] < -20 or self.main_hero.rect.topright[1] < - 20):
-            if self.level_number == '17':
-                pygame.mixer.music.load(script_dir + 'music\Terraria_Music.mp3')
-                pygame.mixer.music.play(-1)
-                self.close_level()
-                self.__init__(level_number='161', complexity=self.complexiry)
-                self.image_text = pygame.font.SysFont('arial', 36).render('Легкая битва', 1, (0, 255, 0))
-            elif self.level_number == '205':
-                self.close_level()
-                self.__init__(level_number='0', complexity=self.complexiry)
-                for i in range(5):
-                    self.person_list.append(Homa(200, 200 + 100 * i))
-                    self.person_list[i].enemy_move = lambda: 0
-                    self.person_list[i].change_hp = lambda x: 0
-                self.main_hero.move(550, 200)
-                self.image_text = pygame.font.SysFont('arial', 36).render('Конец.', 1, (0, 255, 0))
-            elif self.level_number == '204':
-                self.close_level()
-                self.__init__(level_number='205', complexity=self.complexiry)
-            elif self.level_number == '203':
-                self.close_level()
-                self.__init__(level_number='204', complexity=self.complexiry)
-                pygame.mixer.music.load(script_dir + 'music\in_level_music.mp3')
-                pygame.mixer.music.play(-1)
-                self.item_list.append(Watermelon(420, 160))
-            elif self.level_number == '202':
-                self.close_level()
-                self.__init__(level_number='203', complexity=self.complexiry)
-            elif self.level_number == '201':
-                self.close_level()
-                self.__init__(level_number='202', complexity=self.complexiry)
-                self.image_text = pygame.font.SysFont('arial', 36).render('Финальный босс!', 1, (0, 255, 0))
-                pygame.mixer.music.load(script_dir + 'music\Terraria_Music_2.mp3')
-                self.boss = Boss2(500, 500, group=[self.all_sprites_group, self.boss_group])
-                self.boss.main_hero = self.main_hero
-                pygame.mixer.music.play(-1)
-            elif self.level_number == '20':
-                self.close_level()
-                self.__init__(level_number='201', complexity=self.complexiry)
-                self.image_text = pygame.font.SysFont('arial', 36).render('Мирные ёжики', 1, (0, 255, 0))
-            else:
+
+            if not self.load_dop_level():
                 self.main_hero.change_cook_count(int(self.level_number) * 2)
                 self.close_level()
                 if int(self.level_number) + 1 > int(self.main_hero.skills[-1]):
@@ -250,6 +219,53 @@ class Level:
         if self.main_hero.is_dead:
             self.close_level()
             return True
+
+    def load_dop_level(self):
+        # Переходы на следующие уровни хранятся в виде условий из-за особенностей при загрузке нового уровня
+        # уровень, к которому можно перейти по завершению, или текст для отображения на уровне,
+        # можно было бы хранить в файле. Однако кроме этого необходимо загружать другую музыку,
+        # создавать уникальные объекты. И в итоге всеравно нужны будут такие же условия при загрузке
+        # дополнительных уровней
+        if self.level_number == '17':
+            pygame.mixer.music.load(script_dir + 'music\Terraria_Music.mp3')
+            pygame.mixer.music.play(-1)
+            self.close_level()
+            self.__init__(level_number='161', complexity=self.complexiry)
+        elif self.level_number == '205':
+            self.close_level()
+            self.__init__(level_number='0', complexity=self.complexiry)
+            for i in range(5):
+                self.person_list.append(Homa(200, 200 + 100 * i))
+                self.person_list[i].enemy_move = lambda: 0
+                self.person_list[i].change_hp = lambda x: 0
+            self.main_hero.move(550, 200)
+            self.image_text = pygame.font.SysFont('arial', 20).render('Конец. следующие уровни дополнительные. (Они крайне сложные)', 1, (0, 255, 0))
+        elif self.level_number == '204':
+            self.close_level()
+            self.__init__(level_number='205', complexity=self.complexiry)
+        elif self.level_number == '203':
+            self.close_level()
+            self.__init__(level_number='204', complexity=self.complexiry)
+            pygame.mixer.music.load(script_dir + 'music\in_level_music.mp3')
+            pygame.mixer.music.play(-1)
+            self.item_list.append(Watermelon(420, 160))
+        elif self.level_number == '202':
+            self.close_level()
+            self.__init__(level_number='203', complexity=self.complexiry)
+        elif self.level_number == '201':
+            self.close_level()
+            self.__init__(level_number='202', complexity=self.complexiry)
+            self.image_text = pygame.font.SysFont('arial', 36).render('Финальный босс!', 1, (0, 255, 0))
+            pygame.mixer.music.load(script_dir + 'music\Terraria_Music_2.mp3')
+            self.boss = Boss2(500, 500, group=[self.all_sprites_group, self.boss_group])
+            self.boss.main_hero = self.main_hero
+            pygame.mixer.music.play(-1)
+        elif self.level_number == '20':
+            self.close_level()
+            self.__init__(level_number='201', complexity=self.complexiry)
+        else:
+            return False
+        return True
 
     def others_persons(self):
         self.magic_in_blocks()
@@ -269,9 +285,11 @@ class Level:
             else:
                 if person.do_heart:
                     if random.randrange(0, 2):
-                        self.item_list.append(Hearts(*person.rect.topright, group=[self.item_to_take_group, self.all_sprites_group]))
+                        self.item_list.append(
+                            Hearts(*person.rect.topright, group=[self.item_to_take_group, self.all_sprites_group]))
                     else:
-                        self.item_list.append(Cookies(*person.rect.topright, group=[self.item_to_take_group, self.all_sprites_group]))
+                        self.item_list.append(
+                            Cookies(*person.rect.topright, group=[self.item_to_take_group, self.all_sprites_group]))
                     person.do_heart = False
                 self.persons_group.remove(person)
         if all_dead and self.person_list:
@@ -279,22 +297,25 @@ class Level:
                 block.enemy_disappear()
             self.person_list.clear()
             if self.level_number == '203':
-                self.person_list.append(Homa(x=800, y=-100, speed=5, group=[self.persons_group, self.all_sprites_group]))
+                self.person_list.append(
+                    Homa(x=800, y=-100, speed=5, group=[self.persons_group, self.all_sprites_group]))
         if self.boss:
             self.boss.give_object_list([i for i in self.blocks_on_level_list if not i.sleep_now] + self.item_list + [
                 self.main_hero] + self.magic_list)
             if self.boss.enemy_move():
                 for i in range(random.randrange(2, 5)):
                     self.person_list.append(Enemy(x=random.randrange(200, 700), y=random.randrange(50, 800) - 900,
-                                                  speed=random.randrange(3, 6), hp=random.randrange(400, 800), group=[self.persons_group, self.all_sprites_group]))
+                                                  speed=random.randrange(3, 6), hp=random.randrange(400, 800),
+                                                  group=[self.persons_group, self.all_sprites_group]))
                 for _ in range(random.randrange(0, 4)):
                     sq = Squirrel(x=random.randrange(200, 700), y=random.randrange(50, 800) - 900,
-                                  speed=random.randrange(4, 6), hp=random.randrange(600, 1000), group=[self.persons_group, self.all_sprites_group])
+                                  speed=random.randrange(4, 6), hp=random.randrange(600, 1000),
+                                  group=[self.persons_group, self.all_sprites_group])
                     sq.set_hero(self.main_hero)
                     self.person_list.append(sq)
                 if self.boss.type == 'f':
                     gun = Gun(x=random.randrange(100, 700), y=random.randrange(50, 800) - 1200, speed_atack=5,
-                              position=random.randrange(0, 4) ,group=[self.persons_group, self.all_sprites_group])
+                              position=random.randrange(0, 4), group=[self.persons_group, self.all_sprites_group])
                     self.person_list.append(gun)
             if self.boss.type == 'f':
                 boss_magic = self.boss.do_magic()

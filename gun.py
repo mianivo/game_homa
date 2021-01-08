@@ -8,13 +8,14 @@ from script_dir import script_dir
 
 class Gun(Enemy):
     '''Пушка. Отличия от ежа не перемещается в лево/право. Стреляет снарядами.'''
+    gun_image_list = [pygame.image.load(f'{script_dir}\\images\gun\gun{position}.png') for position in range(4)]
+    image_list_left = [pygame.image.load(f'{script_dir}\\images\gun\wheel.png')]
+    image_list_right = image_list_left
 
     def __init__(self, x, y,
-                 image_list_left=['images\gun\wheel.png'],
-                 image_list_right=['images\gun\wheel.png'],
                  speed=4, hp=800, damage=50, is_active=True, speed_atack=1, position=1, group=None):
-        self.gun_image = pygame.image.load(f'{script_dir}\\images\gun\gun{position}.png')
-        Enemy.__init__(self, x, y, image_list_left, image_list_right, speed=speed, hp=hp, damage=damage, group=group)
+        self.gun_image = self.gun_image_list[position]
+        Enemy.__init__(self, x, y, speed=speed, hp=hp, damage=damage, group=group)
         self.is_active = is_active
         self.speed_atack = speed_atack
         self.position = position

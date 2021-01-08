@@ -4,10 +4,10 @@ from script_dir import script_dir
 
 
 class Person(sprite.Sprite):
-    def __init__(self, x, y, image_list_left, image_list_right, speed=5, hp=None, name='', group=None):
-        self.image_list_right = [image.load(script_dir + im) for im in
-                                 image_list_right]  # Загружаем изображения по указаным путям
-        self.image_list_left = [image.load(script_dir + im) for im in image_list_left]
+    image_list_right = [image.load(script_dir + im) for im in []]
+    image_list_left = [image.load(script_dir + im) for im in []]
+
+    def __init__(self, x, y, speed=5, hp=None, name='', group=None):
         self.anim_count = 0
         self.how_much_animations = len(self.image_list_right)
         self.image = self.image_list_right[0]
@@ -36,7 +36,6 @@ class Person(sprite.Sprite):
         self.cook_count = 0
         self.get_damage = False
         super().__init__(group)
-
 
     def __str__(self):
         return f'Персонаж - {self.name}. Координаты: {self.rect.x, self.rect.y}.' \

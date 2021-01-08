@@ -3,10 +3,11 @@ from script_dir import script_dir
 
 
 class Shell(pygame.sprite.Sprite):
-    def __init__(self, x, y, is_right, is_up, color=(0, 0, 0),
-                 dekor_image=pygame.image.load(script_dir + 'images\shell\shell_dekor.png'), group=None):
+    image = pygame.image.load(script_dir + 'images\shell\shell.png')
+    dekor_image = pygame.image.load(script_dir + 'images\shell\shell_dekor.png')
+
+    def __init__(self, x, y, is_right, is_up, color=(0, 0, 0), group=None):
         '''Снаряд для пушки. Наносит урон только главному герою.'''
-        self.image = pygame.image.load(script_dir + 'images\shell\shell.png')
         self.x_cor = x
         self.y_cor = y
         self.color = color
@@ -17,7 +18,6 @@ class Shell(pygame.sprite.Sprite):
         self.damage = 1000
         self.type = 'shell'
         self.where_dekor_list = [(x, y) for _ in range(3)]
-        self.dekor_image = dekor_image
         self.y_cor_fall = -15 if is_up else 0
         self.fall_count = 0
 

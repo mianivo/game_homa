@@ -1,18 +1,22 @@
 from enemy import Enemy
 from squirrel import Squirrel
-from HOMA import Homa
-import random
 import pygame
 import time
 from magic import Magic
 
+from script_dir import script_dir
+
 
 class Boss(Enemy):
+    image_list_left = [pygame.image.load(script_dir + im) for im in
+                       ['images\esh_king\left0.png', 'images\esh_king\left1.png',
+                        'images\esh_king\left2.png']]
+    image_list_right = [pygame.image.load(script_dir + im) for im in
+                        ['images\esh_king\\right0.png', 'images\esh_king\\right1.png',
+                         'images\esh_king\\right2.png']]
+
     def __init__(self, x, y, main=True, group=None):
-        Enemy.__init__(self, x, y, image_list_left=['images\esh_king\left0.png', 'images\esh_king\left1.png',
-                                                    'images\esh_king\left2.png'],
-                       image_list_right=['images\esh_king\\right0.png', 'images\esh_king\\right1.png',
-                                         'images\esh_king\\right2.png'], speed=5, hp=10000, name='Ежице!',
+        Enemy.__init__(self, x, y, speed=5, hp=10000, name='Ежице!',
                        how_much_go_right=65, how_much_go_left=65, damage=100, group=group)
         self.main_boss = main
         self.fase_time = 0
@@ -24,6 +28,7 @@ class Boss(Enemy):
         if self.main_boss:
             pygame.draw.rect(window, self.hp_color,
                              (60, 765, self.hp // 11, 20))
+
     def update(self, *args, **kwargs) -> None:
         if self.is_dead:
             self.remove(self.groups())
@@ -56,15 +61,16 @@ class Boss(Enemy):
 
 class Boss2(Squirrel, Boss):
     '''Финальный босс.'''
+    image_list_left = [pygame.image.load(script_dir + im) for im in ['images\\final_boss\\final_boss_left_1.png',
+                                                                     'images\\final_boss\\final_boss_left_2.png',
+                                                                     'images\\final_boss\\final_boss_left_3.png']]
+    image_list_right = [pygame.image.load(script_dir + im) for im in ['images\\final_boss\\final_boss_right_1.png',
+                                                                      'images\\final_boss\\final_boss_right_2.png',
+                                                                      'images\\final_boss\\final_boss_right_3.png']]
 
     def __init__(self, x, y, group):
         Boss.__init__(self, x, y, group=group)
-        Squirrel.__init__(self, x, y, image_list_left=['images\\final_boss\\final_boss_left_1.png',
-                                                       'images\\final_boss\\final_boss_left_2.png',
-                                                       'images\\final_boss\\final_boss_left_3.png'],
-                          image_list_right=['images\\final_boss\\final_boss_right_1.png',
-                                            'images\\final_boss\\final_boss_right_2.png',
-                                            'images\\final_boss\\final_boss_right_3.png'], group=group)
+        Squirrel.__init__(self, x, y, group=group)
         self.hp = 30500
         self.damage = 100
         self.xp_for_main_hero = 850
@@ -104,16 +110,6 @@ class Boss2(Squirrel, Boss):
         if time.time() - self.magic_time > self.for_magic_time:
             self.set_magic_time()
             if self.is_go_right:
-                return Magic(*self.rect.topright, True, self.damage * 2, self,
-                             image_magic_list=['images\magic\\boss_magic_1.png',
-                                               'images\magic\\boss_magic_2.png',
-                                               'images\magic\\boss_magic_3.png',
-                                               'images\magic\\boss_magic_4.png'],
-                             dekor_image='images\magic\\boss_magic_dekor.png', group=self.groups())
+                return Magic(*self.rect.topright, True, self.damage * 2, self, is_boss_magic=True, group=self.groups())
             else:
-                return Magic(*self.rect.topleft, False, self.damage * 2, self,
-                             image_magic_list=['images\magic\\boss_magic_1.png',
-                                               'images\magic\\boss_magic_2.png',
-                                               'images\magic\\boss_magic_3.png',
-                                               'images\magic\\boss_magic_4.png'],
-                             dekor_image='images\magic\\boss_magic_dekor.png', group=self.groups())
+                return Magic(*self.rect.topleft, False, self.damage * 2, self, is_boss_magic=True, group=self.groups())

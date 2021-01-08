@@ -1,16 +1,25 @@
 from enemy import Enemy
 import time
 import pygame
+
+from script_dir import script_dir
+
+
 class Squirrel(Enemy):
     '''Враг - белка. Я попытался ей дать хоть немного логики.'''
+
+    image_list_left = [pygame.image.load(script_dir + im) for im in
+                       ['images\enemys\squirrel\left0.png', 'images\enemys\squirrel\left1.png',
+                        'images\enemys\squirrel\left2.png']]
+    image_list_right = [pygame.image.load(script_dir + im) for im in
+                        ['images\enemys\squirrel\\right0.png', 'images\enemys\squirrel\\right1.png',
+                         'images\enemys\squirrel\\right2.png']]
+
     def __init__(self, x, y,
-                 image_list_left=['images\enemys\squirrel\left0.png', 'images\enemys\squirrel\left1.png',
-                                  'images\enemys\squirrel\left2.png'],
-                 image_list_right=['images\enemys\squirrel\\right0.png', 'images\enemys\squirrel\\right1.png',
-                                   'images\enemys\squirrel\\right2.png'],
-                 speed=5, hp=1400, name='Белка', how_much_go_right=40, how_much_go_left=40, damage=70, main_hero=None, is_go_right=True, group=None):
-        Enemy.__init__(self, x=x, y=y, image_list_left=image_list_left,
-                       image_list_right=image_list_right,how_much_go_right=how_much_go_right, how_much_go_left=how_much_go_left, speed=speed, hp=hp, name=name, damage=damage, group=group)
+                 speed=5, hp=1400, name='Белка', how_much_go_right=40, how_much_go_left=40, damage=70, main_hero=None,
+                 is_go_right=True, group=None):
+        Enemy.__init__(self, x=x, y=y, how_much_go_right=how_much_go_right,
+                       how_much_go_left=how_much_go_left, speed=speed, hp=hp, name=name, damage=damage, group=group)
         self.is_go_right = is_go_right
         self.near_person = False
         self.rast = 0
@@ -22,6 +31,7 @@ class Squirrel(Enemy):
         self.jump_time = 0
         self.turn_time = 0
         self.main_hero = main_hero
+
     def set_hero(self, hero):
         self.main_hero = hero
 
@@ -48,17 +58,19 @@ class Squirrel(Enemy):
         '''Смотрит положение относително героя.'''
         rast = self.rect.topleft[0] - self.main_hero.rect.topleft[0]  # Растояние по иксу до героя
         self.rast = rast
-        if -self.main_hero.rect.height <= self.rect.topleft[1] - self.main_hero.rect.topleft[1] <= self.main_hero.rect.height:  # Если корднаты по игрику примерно равны
-                rect_for_check = pygame.Rect(self.rect.topleft[0], self.rect.topleft[1] + 20, -self.rast, 1)  # Создаем прямоугольник от белки к главному герою
-                if (rast >= 0 and self.is_go_left) or (rast <= 0 and self.is_go_right):
-                    for block in self.object_list:  # Проверяем прямоугольник на соприкоснавения с блоками
-                        if rect_for_check.colliderect(block.rect):
-                            return
-                    self.hero_kor = self.main_hero.rect.topleft
-                    self.rast = rast
-                    self.near_person = True
-                    self.set_hero_time()
-                    return
+        if -self.main_hero.rect.height <= self.rect.topleft[1] - self.main_hero.rect.topleft[
+            1] <= self.main_hero.rect.height:  # Если корднаты по игрику примерно равны
+            rect_for_check = pygame.Rect(self.rect.topleft[0], self.rect.topleft[1] + 20, -self.rast,
+                                         1)  # Создаем прямоугольник от белки к главному герою
+            if (rast >= 0 and self.is_go_left) or (rast <= 0 and self.is_go_right):
+                for block in self.object_list:  # Проверяем прямоугольник на соприкоснавения с блоками
+                    if rect_for_check.colliderect(block.rect):
+                        return
+                self.hero_kor = self.main_hero.rect.topleft
+                self.rast = rast
+                self.near_person = True
+                self.set_hero_time()
+                return
 
     def enemy_move(self):
         self.where_hero()

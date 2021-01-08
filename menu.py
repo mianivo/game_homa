@@ -1,7 +1,6 @@
 import pygame.font
 from levels import *
 import time
-import keyboard
 from script_dir import script_dir
 
 

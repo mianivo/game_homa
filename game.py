@@ -53,12 +53,6 @@ try:
                         self.load_boss_music()
                     else:
                         self.load_level_music()
-                    if int(result[1]) == 14:
-                        self.menu.create_information(['Адовый уровень, с очень хорошей наградой в конце',
-                                                      'Советую поставить сложность по ниже(у пушек не бесконечный урон),',
-                                                      'и на этом уровне потратиться на заклинания.'],
-                                                     self.menu.what_show, append_back=0, x_cor=600)
-
                     self.level_now = levels.Level(result[-1], self.complexity)
                     self.window = pygame.display.set_mode(self.level_now.level_size)
                 elif result[0] == 'main_menu':
@@ -95,6 +89,7 @@ try:
         def run_game(self):
             self.load_menu_music()
             self.keys = []
+            clock = pygame.time.Clock()
             while True:
                 self.start = time()
                 self.window.blit(self.bg, (0, 0))
@@ -122,11 +117,9 @@ try:
                 self.in_menu()
 
                 pygame.display.update()
-                sleep_time = 0.048 - (time() - self.start)  # частота обновления где-то 24 кадра в секунду.
+                clock.tick(23)
                 # С каждым кадром все процессы игры(проверка соприкоснавений, перемещения) прогоняются.
                 # По моим замерам более 80% времени идет на прорисовку
-                if sleep_time > 0:
-                    sleep(sleep_time)
 
         def close_level(self):
             try:  # чтобы работала в меню кнопка выхода в главное меню

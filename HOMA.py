@@ -7,13 +7,15 @@ from script_dir import script_dir
 
 
 class Homa(Person):  # Главного героя - хомяка зовут Хома!.
-    def __init__(self, x, y,
-                 image_list_left=['images\main_hero\Left0.png', 'images\main_hero\Left1.png',
-                                  'images\main_hero\Left2.png'],
-                 image_list_right=['images\main_hero\Right0.png', 'images\main_hero\Right1.png',
-                                   'images\main_hero\Right2.png'],
-                 speed=4, hp=400, complexity=0, group=None):
-        Person.__init__(self, x, y, image_list_left, image_list_right, speed, hp, 'Хома!', group)
+    image_list_left = [pygame.image.load(script_dir + im) for im in
+                       ['images\main_hero\Left0.png', 'images\main_hero\Left1.png',
+                        'images\main_hero\Left2.png']]
+    image_list_right = [pygame.image.load(script_dir + im) for im in
+                        ['images\main_hero\Right0.png', 'images\main_hero\Right1.png',
+                         'images\main_hero\Right2.png']]
+
+    def __init__(self, x, y, speed=4, hp=400, complexity=0, group=None):
+        Person.__init__(self, x, y, speed, hp, 'Хома!', group)
         self.complexity = complexity  # сложность от неё зависит получаемый урон.
         self.is_jump = False
         self.can_jump = False

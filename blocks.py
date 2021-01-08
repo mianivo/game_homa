@@ -2,6 +2,15 @@ from pygame import image, Rect, sprite
 import time
 from script_dir import script_dir
 
+blocks_image_list = {'images\Blocks\stone_wall.png': image.load(script_dir + 'images\Blocks\stone_wall.png'),
+                     'images\Blocks\dirt.png': image.load(script_dir + 'images\Blocks\dirt.png'),
+                     'images\Blocks\\board.png': image.load(script_dir + 'images\Blocks\\board.png'),
+                     'images\dekor\Bush.png': image.load(script_dir + 'images\dekor\Bush.png'),
+                     'images\Blocks\gold.png': image.load(script_dir + 'images\Blocks\gold.png'),
+                     'images\Blocks\\final_boss_wall.png': image.load(script_dir + 'images\Blocks\\final_boss_wall.png'),
+                     'images\Blocks\spike.png': image.load(script_dir + 'images\Blocks\spike.png'),
+                     'images\Blocks\\rainbow_block\sprite_00.png':
+                         image.load(script_dir + 'images\Blocks\\rainbow_block\sprite_00.png')}
 
 class Blocks(sprite.Sprite):
     empty_image = image.load(script_dir + 'images//empty_image.png')
@@ -9,7 +18,10 @@ class Blocks(sprite.Sprite):
     def __init__(self, x, y, where_image='images\Blocks\dirt.png', sleep_block=False, sleep_now=False, without=False,
                  without_now=False, is_dekor=False, group=None):
         '''Инициализирует блок и его характеристики'''
-        self.image = image.load(script_dir + where_image)
+        if where_image in blocks_image_list:
+            self.image = blocks_image_list[where_image]
+        else:
+            raise ValueError('Не корректно задан путь к файлу с изображением')
         self.start_image = self.image.copy()
         self.x_cor = x
         self.y_cor = y
@@ -69,13 +81,14 @@ class Dekor(Blocks):
 
 
 class Rainbow_blocks(Blocks):
+    where_image_list = [f'{script_dir}images\Blocks\\rainbow_block\sprite_{i if i >= 10 else "0" + str(i)}.png'
+                        for i in
+                        range(18)]
+
     def __init__(self, x, y, sleep_block=False, sleep_now=False, without=False, without_now=False, is_dekor=False,
                  group=None):
         Blocks.__init__(self, x, y, where_image='images\Blocks\\rainbow_block\sprite_00.png', sleep_block=sleep_block,
                         sleep_now=sleep_now, without=without, without_now=without_now, is_dekor=is_dekor, group=group)
-        self.where_image_list = [f'{script_dir}images\Blocks\\rainbow_block\sprite_{i if i >= 10 else "0" + str(i)}.png'
-                                 for i in
-                                 range(18)]
         self.image_list = [image.load(im) for im in self.where_image_list]
         self.image_count = 0
         self.max_count = 17

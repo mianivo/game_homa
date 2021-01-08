@@ -2,15 +2,19 @@ import pygame
 from person import Person
 import random
 
+from script_dir import script_dir
+
 
 class Enemy(Person):  # Главного героя - хомяка зовут Хома!.
+    image_list_left = [pygame.image.load(script_dir + im) for im in
+                       ['images\enemys\esh\left1.png', 'images\enemys\esh\left2.png',
+                        'images\enemys\esh\left3.png']]
+    image_list_right = [pygame.image.load(script_dir + im) for im in ['images\enemys\esh\Right1.png', 'images\enemys\esh\Right2.png',
+                        'images\enemys\esh\Right3.png']]
+
     def __init__(self, x, y,
-                 image_list_left=['images\enemys\esh\left1.png', 'images\enemys\esh\left2.png',
-                                  'images\enemys\esh\left3.png'],
-                 image_list_right=['images\enemys\esh\Right1.png', 'images\enemys\esh\Right2.png',
-                                   'images\enemys\esh\Right3.png'],
                  speed=4, hp=800, name='Ежице!', how_much_go_right=30, how_much_go_left=30, damage=50, group=None):
-        Person.__init__(self, x, y, image_list_left, image_list_right, speed, hp, name, group)
+        Person.__init__(self, x, y, speed, hp, name, group)
         self.how_much_go_right_start = how_much_go_right
         self.how_much_go_left_start = how_much_go_left
         self.damage = damage
