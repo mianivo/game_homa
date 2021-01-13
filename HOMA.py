@@ -31,10 +31,10 @@ class Homa(Person):  # Главного героя - хомяка зовут Х�
         self.image_text_xp = pygame.font.SysFont('arial', 36).render(str(self.level), 1, (255, 255, 0))
         self.is_dead = False
         self.rect_list = []
-        self.damage = self.level * 9 + 120
+        self.damage = self.level * 11 + 130
         self.type = 'main_hero'
 
-        self.hp = self.level * 45 + 250
+        self.hp = self.level * 50 + 250
         self.cook_image = pygame.image.load(script_dir + 'images\items_to_take\Cook.png')
         self.cook_image_text = pygame.font.SysFont('arial', 24).render(str(self.cook_count), 1, (255, 200, 0))
         self.heart_image = pygame.image.load(script_dir + 'images\items_to_take\Heart.png')

@@ -72,8 +72,8 @@ class Boss2(Squirrel, Boss):
         Boss.__init__(self, x, y, group=group)
         Squirrel.__init__(self, x, y, group=group)
         self.hp = 30500
-        self.damage = 100
-        self.xp_for_main_hero = 850
+        self.damage = 90
+        self.xp_for_main_hero = 950
         self.for_fase_time = self.hp // 2000 + 4
         self.type = 'f'
         self.rect.height += 1

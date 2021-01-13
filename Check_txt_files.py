@@ -3,7 +3,7 @@ from script_dir import script_dir
 
 def check_settings():
     def do_settings_file():
-        normal_string = ['273', '276', '275', '274', '49', '50', '51', '2']
+        normal_string = ['119', '97', '100', '115', '49', '50', '51', '2']
         with open(script_dir + 'settings.txt', 'w') as file:
             file.write('\n'.join(normal_string))
 

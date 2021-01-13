@@ -16,7 +16,7 @@ class Squirrel(Enemy):
                          'images\enemys\squirrel\\right2.png']]
 
     def __init__(self, x, y,
-                 speed=5, hp=1400, name='Белка', how_much_go_right=40, how_much_go_left=40, damage=70, main_hero=None,
+                 speed=5, hp=1400, name='Белка', how_much_go_right=40, how_much_go_left=40, damage=40, main_hero=None,
                  is_go_right=True, group=None):
         Enemy.__init__(self, x=x, y=y, how_much_go_right=how_much_go_right,
                        how_much_go_left=how_much_go_left, speed=speed, hp=hp, name=name, damage=damage, group=group)

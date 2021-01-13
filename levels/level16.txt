@@ -154,8 +154,8 @@ spike 400 720
 spike 640 720  
 spike 800 720  
 spike 960 720  
-esh 120 80 230 230
-Homa 100 440  
+esh 120 80 240 240
+Homa 120 420  
 board 80 0  
 board 120 0  
 board 200 320  without 1

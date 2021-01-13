@@ -19,7 +19,7 @@ try:
             st = settings.Settings()  # Самые основные настройки
             self.window = pygame.display.set_mode((st.window_width, st.window_height))
             pygame.display.set_caption('Хома!')
-            self.menu = menu.Menu(self.window)  # Меню, все кнопки(включая кнопку выхода в уровне)
+            self.menu = menu.Menu()  # Меню, все кнопки(включая кнопку выхода в уровне)
             self.bg = st.bg
             self.level_go = False
             self.music_on = True
@@ -40,9 +40,9 @@ try:
                 pygame.mixer.music.play(-1)
 
         def in_menu(self):
-            self.menu.draw()
+            self.menu.draw(self.window)
             # Проверка результата нажатий на кнопки меню
-            result = self.menu.click(*self.mouse_pos, pygame.mouse.get_pressed()[0])
+            result = self.menu.run(*self.mouse_pos, pygame.mouse.get_pressed()[0])
             if result:
                 if result[0] == 'loadl':  # Загружает уровень
                     self.level_go = True
@@ -58,6 +58,7 @@ try:
                 elif result[0] == 'main_menu':
                     # закрытие уровня, длл кнопки на уровне (если переход не с уровня, ничего не произайдет)
                     self.close_level()
+                    self.load_menu_music()
                 elif result[0] == 'music':
                     self.music_on = not self.music_on  # Для кнопки выключения музыки в настройках
                     if self.music_on:
@@ -127,8 +128,8 @@ try:
                 self.level_go = False
                 del self.level_now
                 pygame.display.set_mode((800, 600))
-                self.menu.__init__(self.window)  # Обновление меню
-                self.menu.start()  # переход в список уровней
+                self.menu.__init__()  # Обновление меню
+                self.menu.change_section_now('levels')  # переход в список уровней
                 self.load_menu_music()
                 self.keys.clear()  # Очитска списка нажатых клавиш
             except:
@@ -143,19 +144,18 @@ try:
 except pygame.error as e:  # При ошибке выводит сообщение
     print(e)
     import Check_other_files
-#except Exception as e:
-    if False:
-        import logging
-        import tkinter as tk
+except Exception as e:
+    import logging
+    import tkinter as tk
 
-        window = tk.Tk('400x250')
-        window.title('Непредвиденная ошибка.')
-        lbl = tk.Label(window,
-                       text='Произошла непредвиденная ошибка. Обратитесь к разработчику игры.\n Сообщение об ошибке записано в файл log.txt')
-        lbl.grid(column=0, row=0)
-        lbl2 = tk.Label(window, text=e)
-        lbl2.grid(column=0, row=1)
-        window.mainloop()
-        logging.basicConfig(filename="log.txt", level=logging.INFO)
-        logging.error(str(e))
-        input()
+    window = tk.Tk('400x250')
+    window.title('Непредвиденная ошибка.')
+    lbl = tk.Label(window,
+                   text='Произошла непредвиденная ошибка. Обратитесь к разработчику игры.\n Сообщение об ошибке записано в файл log.txt')
+    lbl.grid(column=0, row=0)
+    lbl2 = tk.Label(window, text=e)
+    lbl2.grid(column=0, row=1)
+    window.mainloop()
+    logging.basicConfig(filename="log.txt", level=logging.INFO)
+    logging.error(str(e))
+    input()

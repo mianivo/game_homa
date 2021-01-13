@@ -5,7 +5,6 @@ from HOMA import Homa
 from enemy import Enemy
 from item_to_take import Cookies, Hearts, Watermelon
 from spike import Spikes
-from magic import Magic
 from squirrel import Squirrel
 from boss import Boss, Boss2
 from Shell import Shell
@@ -15,6 +14,7 @@ from script_dir import script_dir
 
 class Level:
     def __init__(self, level_number, complexity):
+
         self.blocks_group = pygame.sprite.Group()
         self.persons_group = pygame.sprite.Group()
         self.boss_group = pygame.sprite.Group()
@@ -235,7 +235,7 @@ class Level:
             self.close_level()
             self.__init__(level_number='0', complexity=self.complexiry)
             for i in range(5):
-                self.person_list.append(Homa(200, 200 + 100 * i))
+                self.person_list.append(Homa(200, 200 + 100 * i, group=[self.persons_group, self.all_sprites_group]))
                 self.person_list[i].enemy_move = lambda: 0
                 self.person_list[i].change_hp = lambda x: 0
             self.main_hero.move(550, 200)
@@ -248,7 +248,7 @@ class Level:
             self.__init__(level_number='204', complexity=self.complexiry)
             pygame.mixer.music.load(script_dir + 'music\in_level_music.mp3')
             pygame.mixer.music.play(-1)
-            self.item_list.append(Watermelon(420, 160))
+            self.item_list.append(Watermelon(480, 160, group=[self.item_to_take_group, self.all_sprites_group]))
         elif self.level_number == '202':
             self.close_level()
             self.__init__(level_number='203', complexity=self.complexiry)

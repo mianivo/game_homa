@@ -160,7 +160,7 @@ board 520 720  without 0
 stone_wall 600 600  
 board 960 440  
 board 400 280  
-squirrel 920 80 go 110 0
+squirrel 920 80 go 130 0
 board 200 120  
 board 200 80  
 board 200 40  

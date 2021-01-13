@@ -32,5 +32,6 @@ class Gun(Enemy):
         self.time_attack = time()
 
     def draw_additional(self, window):
+        super(Gun, self).draw_additional(window)
         if not self.is_dead:
             window.blit(self.gun_image, (self.rect.topleft[0] - 10, self.rect.topleft[1] - 10))

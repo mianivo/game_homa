@@ -111,8 +111,6 @@ class Person(sprite.Sprite):
         elif self.is_go_left:
             self.image = self.image_list_left[self.anim_count]
 
-    def draw(self, window):
-        window.blit(self.image, (self.rect.topright))
 
     def in_other_rect(self, x=0, y=0):
         '''Если прерсонаж пападет в блок, выталкивает его, причем не всегда в первоначальное положение.

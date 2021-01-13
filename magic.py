@@ -12,8 +12,11 @@ class Magic(pygame.sprite.Sprite):
 
     dekor_image = pygame.image.load(script_dir + 'images\magic\magic_dekor_1.png')
 
-    boss_image_magic_list = []
-    boss_dekor_image = []
+    boss_image_magic_list = [pygame.image.load(script_dir + im) for im in ['images\magic\\boss_magic_1.png',
+                        'images\magic\\boss_magic_2.png',
+                        'images\magic\\boss_magic_3.png',
+                        'images\magic\\boss_magic_4.png']]
+    boss_dekor_image = pygame.image.load(script_dir + 'images\magic\\boss_magic_dekor.png')
 
     def __init__(self, x, y, is_right, damage, main_hero, is_boss_magic=False, group=None):
         if not is_boss_magic:

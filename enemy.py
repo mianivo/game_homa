@@ -18,7 +18,7 @@ class Enemy(Person):  # Главного героя - хомяка зовут Х
         self.how_much_go_right_start = how_much_go_right
         self.how_much_go_left_start = how_much_go_left
         self.damage = damage
-        self.xp_for_main_hero = 20
+        self.xp_for_main_hero = 25
 
         self.how_much_go_right = how_much_go_right
         self.how_much_go_left = how_much_go_left
