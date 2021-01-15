@@ -9,3 +9,6 @@ ERROR:root:'Magic' object has no attribute 'image'
 ERROR:root:'Magic' object has no attribute 'image'
 ERROR:root:
 ERROR:root:'Menu' object has no attribute 'reload_menu'
+ERROR:root:'Game' object has no attribute 'level_now'
+ERROR:root:'Game' object has no attribute 'level_now'
+ERROR:root:'Game' object has no attribute 'level_now'

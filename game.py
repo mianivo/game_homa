@@ -1,26 +1,30 @@
 # Игра завершена 26.06.2020.
 from script_dir import script_dir  # Ошибка, если не указывать абсолютный путь
-
+# В коде давольно мало комметариев(как минимуи меньше чем в прошлом проекте)
+# Что делает модуль/класс/метод понятно из названия. Сложные моменты объяснены.
 print(script_dir)
 try:
     import pygame
 
     pygame.init()
 
-    import menu  # Меню
-    import HOMA  # главный герой
+    import menu
+    import HOMA
     import levels
     import settings
     from time import sleep, time
 
 
     class Game:
+        '''Связующий класс. Вызывает основные методы меню, уровня. Отрисоавывает экран.'''
+
         def __init__(self):
             st = settings.Settings()  # Самые основные настройки
             self.window = pygame.display.set_mode((st.window_width, st.window_height))
             pygame.display.set_caption('Хома!')
             self.menu = menu.Menu()  # Меню, все кнопки(включая кнопку выхода в уровне)
             self.bg = st.bg
+            self.level_now = None
             self.level_go = False
             self.music_on = True
 
@@ -40,6 +44,8 @@ try:
                 pygame.mixer.music.play(-1)
 
         def in_menu(self):
+            '''Вся работа класса с меню. Отрисовывает меню,
+             получает нажатые кнопки, некоторые кнопки обратавыет.'''
             self.menu.draw(self.window)
             # Проверка результата нажатий на кнопки меню
             result = self.menu.run(*self.mouse_pos, pygame.mouse.get_pressed()[0])
@@ -67,7 +73,7 @@ try:
                         pygame.mixer.music.pause()
 
         def check_keys(self, event):
-            '''Проверяет, совпадение кода нажатых клавиш, с кодом из списка горячих клавишь'''
+            '''Проверяет, совпадение кода нажатых клавиш, с кодом из списка горячих клавиш'''
             if event.key == self.key_list[0]:
                 return 'j'
             if event.key == self.key_list[2]:
@@ -82,23 +88,25 @@ try:
                 return 'm'
 
         def in_level(self, keys):
+            '''Вся работа с уровнем.'''
             self.level_now.draw(self.window)
             self.level_now.others_persons()  # Обработка персонажей
             if self.level_now.control_main_hero(keys):  # Управление гланым героем
                 self.close_level()
 
         def run_game(self):
+            '''Метод реализует основной цикл игры.'''
             self.load_menu_music()
-            self.keys = []
+
+            self.keys = []  # Список нажатых клавиш
             clock = pygame.time.Clock()
             while True:
-                self.start = time()
                 self.window.blit(self.bg, (0, 0))
                 for event in pygame.event.get():
                     if event.type == pygame.QUIT:
                         try:
                             self.level_now.close_level()
-                        except:  # Уровня нет если мы в меню
+                        except AttributeError:
                             pass
                         finally:
                             quit('выход крестиком')
@@ -108,10 +116,8 @@ try:
                         if event.type == pygame.KEYDOWN:
                             self.keys.append(self.check_keys(event))
                         if event.type == pygame.KEYUP:
-                            try:
-                                self.keys.remove(self.check_keys(event))
-                            except:
-                                pass
+                            self.keys.remove(self.check_keys(event))
+
                 self.mouse_pos = pygame.mouse.get_pos()  # Позиция мыши
                 if self.level_go:
                     self.in_level(self.keys)
@@ -146,12 +152,13 @@ except pygame.error as e:  # При ошибке выводит сообщени
     import Check_other_files
 except Exception as e:
     import logging
-    import tkinter as tk
+    import tkinter as tk  # использую ткинтер, т.к. нужно показать только окошко с надписью
 
     window = tk.Tk('400x250')
     window.title('Непредвиденная ошибка.')
     lbl = tk.Label(window,
-                   text='Произошла непредвиденная ошибка. Обратитесь к разработчику игры.\n Сообщение об ошибке записано в файл log.txt')
+                   text='Произошла непредвиденная ошибка.'
+                        ' Обратитесь к разработчику игры.\n Сообщение об ошибке записано в файл log.txt')
     lbl.grid(column=0, row=0)
     lbl2 = tk.Label(window, text=e)
     lbl2.grid(column=0, row=1)

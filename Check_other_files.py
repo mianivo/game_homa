@@ -1,4 +1,3 @@
-import pygame
 import os
 import tkinter as tk
 
@@ -7,6 +6,7 @@ window.title('Ошибка! Не найден файл!')
 
 
 def check_files():
+    '''Проверяет файлы изображений, уровней и т.д.'''
     answer = []
 
     def check_dir(dirr, must_be=[]):

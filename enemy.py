@@ -6,11 +6,13 @@ from script_dir import script_dir
 
 
 class Enemy(Person):  # Главного героя - хомяка зовут Хома!.
+    '''Обычный враг'''
     image_list_left = [pygame.image.load(script_dir + im) for im in
                        ['images\enemys\esh\left1.png', 'images\enemys\esh\left2.png',
                         'images\enemys\esh\left3.png']]
-    image_list_right = [pygame.image.load(script_dir + im) for im in ['images\enemys\esh\Right1.png', 'images\enemys\esh\Right2.png',
-                        'images\enemys\esh\Right3.png']]
+    image_list_right = [pygame.image.load(script_dir + im) for im in
+                        ['images\enemys\esh\Right1.png', 'images\enemys\esh\Right2.png',
+                         'images\enemys\esh\Right3.png']]
 
     def __init__(self, x, y,
                  speed=4, hp=800, name='Ежице!', how_much_go_right=30, how_much_go_left=30, damage=50, group=None):
@@ -27,6 +29,7 @@ class Enemy(Person):  # Главного героя - хомяка зовут Х
         self.do_heart = False
 
     def enemy_move(self):
+        '''Логика передвижения героя (влево-вправо)'''
         if self.how_much_go_right < 0 and self.is_go_right:
             self.is_go_right = False
             self.how_much_go_right = self.how_much_go_right_start
@@ -42,6 +45,7 @@ class Enemy(Person):  # Главного героя - хомяка зовут Х
             self.go_left()
 
     def unique_properties(self, main_hero):
+        '''Взаимодействие вр'''
         if self.rect.colliderect(main_hero.rect):  # часть взоимодействия с главным героем
             if main_hero.can_jump == False and main_hero.is_jump == False:
                 self.change_hp(-main_hero.damage)

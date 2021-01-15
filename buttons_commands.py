@@ -1,9 +1,11 @@
-from script_dir import script_dir
-
-import pygame
 from abc import ABC, abstractmethod
 
+import pygame
+
+from script_dir import script_dir
+
 with open(script_dir + 'settings.txt') as file:
+    # необходимые переменные для комманд
     dict_chars = {1073741906: 'Ве', 1073741905: 'Ни', 1073741903: 'Пр', 1073741904: 'Ле'}
     strings = file.read().split('\n')
     jump, left, right, down, magic, hill, tp, complexty = [dict_chars[int(i)] if int(i) in
@@ -16,13 +18,18 @@ with open(script_dir + 'images\main_hero\main_hero_info.txt') as about_hero_info
 
 
 class Command(ABC):
+    '''Абстрактный класс команды'''
+
     @abstractmethod
     def execute(self, menu):
         pass
 
 
 class ChangeSettingsFileCommand(Command):
+    '''изменение файла настроек'''
+
     def __init__(self, string_number, text='1'):
+        '''Какой текст писать, и на какую строку'''
         self.string_number = string_number
         self.text = text
 
@@ -38,6 +45,8 @@ class ChangeSettingsFileCommand(Command):
 
 
 class ChangeMenuSectionCommand(Command):
+    '''Меняет текущую секцию меню'''
+
     def __init__(self, section_name, mouse_move=()):
         self.new_section_name = section_name
         self.mouse_move = mouse_move
@@ -54,6 +63,10 @@ class QuitCommand(Command):
 
 
 class ReturnCommand(ChangeMenuSectionCommand):
+    '''Для общения с классом Game,
+    кнопки должны возвращать значения
+    (например номер нажатой кнопки уровня, какой уровень загружать)'''
+
     def __init__(self, what_return, section_name='', mouse_move=()):
         super().__init__(section_name, mouse_move)
         self.what_return = what_return
@@ -68,6 +81,7 @@ import time
 
 
 class MusicCommand(Command):
+    '''Включает и выключает музыку'''
 
     def __init__(self):
         self.click_time = 0
@@ -79,7 +93,10 @@ class MusicCommand(Command):
 
 
 class SetKeyCommand(ChangeSettingsFileCommand):
+    '''Установка клавиш управления'''
+
     def read_key(self):
+        '''Получение нажатой клавиши, и запись её в файл'''
         while True:
             for event in pygame.event.get():
                 if event.type == pygame.KEYDOWN:
@@ -122,9 +139,9 @@ class DelProgressCommand(Command):
 
 back_button_command = ChangeMenuSectionCommand('main_menu')
 
-start_button_command = ChangeMenuSectionCommand('levels', mouse_move=(400, 89))
+start_button_command = ChangeMenuSectionCommand('levels', mouse_move=(400, 29))
 settings_button_command = ChangeMenuSectionCommand('settings', mouse_move=(400, 89))
-information_button_command = ChangeMenuSectionCommand('information')
+information_button_command = ChangeMenuSectionCommand('information', mouse_move=(400, 459))
 quit_button_command = QuitCommand()
 
 levels_command = ReturnCommand('loadl', 'into_level')
@@ -152,6 +169,7 @@ open_skills_button_command = ChangeMenuSectionCommand('open_skills')
 
 
 class OpenHillSkill(Command):
+    '''Открывает способоность лечение'''
     def execute(self, menu=None):
         result = False
         with open(script_dir + 'images\main_hero\main_hero_info.txt') as about_hero_info:
@@ -170,6 +188,7 @@ open_hill_command = OpenHillSkill()
 
 
 class OpenTeleportSkill(Command):
+    '''Открывает способоность лечение'''
     def execute(self, menu):
         result = False
         with open(script_dir + 'images\main_hero\main_hero_info.txt') as about_hero_info:

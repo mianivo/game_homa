@@ -8,6 +8,7 @@ from script_dir import script_dir
 
 
 class Boss(Enemy):
+    # Тот же принцип, что и с блоками
     image_list_left = [pygame.image.load(script_dir + im) for im in
                        ['images\esh_king\left0.png', 'images\esh_king\left1.png',
                         'images\esh_king\left2.png']]
@@ -30,6 +31,7 @@ class Boss(Enemy):
                              (60, 765, self.hp // 11, 20))
 
     def update(self, *args, **kwargs) -> None:
+        '''Удаляет себя из групп'''
         if self.is_dead:
             self.remove(self.groups())
 

@@ -1,8 +1,7 @@
-import pygame
-from menu import Buttons, Label, Menu, MenuSection, ComplextyButton
-from script_dir import script_dir
 from buttons_commands import *
+from menu import Buttons, Label, MenuSection, ComplextyButton
 
+# Модуль инициализирует разделы меню
 with open(script_dir + 'settings.txt') as file:
     dict_chars = {1073741906: 'Ве', 1073741905: 'Ни', 1073741903: 'Пр', 1073741904: 'Ле'}
     strings = file.read().split('\n')

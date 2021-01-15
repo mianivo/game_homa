@@ -2,6 +2,7 @@ from script_dir import script_dir
 
 
 def check_settings():
+    '''Проверяет на корректность настройки'''
     def do_settings_file():
         normal_string = ['119', '97', '100', '115', '49', '50', '51', '2']
         with open(script_dir + 'settings.txt', 'w') as file:
@@ -27,6 +28,7 @@ def check_settings():
 
 
 def check_main_hero():
+    '''Проверяет на корректность настройки'''
     def do_main_hero_file():
         normal_string = ['0', '80', '0', '0', '0', '-1']
         with open(script_dir + 'images\main_hero\main_hero_info.txt', 'w') as file:

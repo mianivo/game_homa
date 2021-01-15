@@ -1,4 +1,3 @@
-import magic
 import pygame
 from enemy import Enemy
 from Shell import Shell
